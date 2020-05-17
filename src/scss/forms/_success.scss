@@ -1,0 +1,21 @@
+.Success {
+  margin-top: 4em;
+
+  @include tablet {
+    margin: 2rem;
+  }
+
+  &__title {
+    padding: 0 2rem;
+  }
+  &__info {
+    padding: 2rem;
+    margin-bottom: 4rem;
+    font-size: var(--font-size-l);
+  }
+  .row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
+}

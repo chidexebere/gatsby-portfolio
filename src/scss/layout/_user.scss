@@ -1,0 +1,14 @@
+.User {
+  flex-basis: auto;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 3rem;
+
+  @include tablet {
+    margin: 5rem;
+  }
+
+  @include desktop {
+    margin: 5rem 7rem;
+  }
+}

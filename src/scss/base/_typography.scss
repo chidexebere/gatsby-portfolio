@@ -1,0 +1,31 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: var(--body-text-color);
+  font-family: var(--font-main);
+  font-size: 1.5rem;
+  line-height: var(--font-base-line-height);
+}
+
+hr {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+p {
+  font-size: 1.4rem;
+}
+
+.fa {
+  margin-right: 1rem;
+}

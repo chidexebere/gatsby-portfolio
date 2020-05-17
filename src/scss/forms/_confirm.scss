@@ -1,0 +1,39 @@
+.Confirm {
+  color: var(--color-greyscale-dark);
+  padding: 0 1rem;
+
+  @include tablet {
+    margin: 2rem;
+    padding: 0 2rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin: 2rem 0;
+  }
+
+  &__title {
+    margin: 1em 0;
+    font-size: var(--font-size-m);
+  }
+
+  &__list {
+    font-weight: var(--font-thick);
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    margin: 2em 0;
+
+    & .entry {
+      background-color: var(--color-greyscale-light);
+      font-weight: normal;
+      text-transform: none;
+      font-size: var(--font-size-xl);
+      line-height: var(--font-base-line-height);
+    }
+  }
+  &__invalid-field {
+    color: var(--color-tertiary-base);
+  }
+}

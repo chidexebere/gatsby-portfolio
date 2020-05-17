@@ -1,0 +1,42 @@
+.Input-Field {
+  & label {
+    display: block;
+    margin-bottom: 1.5em;
+    & .label-text {
+      color: var(--color-greyscale-dark);
+      transition: all 0.3s;
+      cursor: text;
+      margin-bottom: 1em;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      word-wrap: break-word;
+      font-weight: var(--font-thick);
+      font-size: var(--font-size-m);
+    }
+  }
+  & input {
+    background-color: var(--color-greyscale-light);
+    border: 0;
+    border-bottom: 2px solid var(--color-greyscale-base);
+    letter-spacing: -1px;
+    outline: 0;
+    padding: 0.5em;
+    width: 100%;
+    color: var(--color-greyscale-dark);
+    transition: all 0.3s;
+    font-size: var(--font-size-l);
+    line-height: var(--font-base-line-height);
+  }
+  .invalid-field {
+    border-color: var(--color-tertiary-base);
+  }
+
+  .validation-error {
+    bottom: -20px;
+    color: var(--color-tertiary-base);
+    display: block;
+    left: 0;
+    font-size: var(--font-size-s);
+    line-height: var(--font-base-line-height);
+  }
+}

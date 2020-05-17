@@ -1,0 +1,38 @@
+// .site-header {
+//   flex-basis: 1;
+//   background: linear-gradient(
+//     90deg,
+//     var(--header-background-start) 4%,
+//     var(--header-background-end)
+//   );
+//   height: 12rem;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   align-items: center;
+
+//   @include tablet {
+//     height: 7rem;
+//     flex-direction: row;
+//   }
+
+//   .Header {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     &__logo {
+//       margin-top: 0.8rem;
+//       img {
+//         width: 200px;
+//       }
+//     }
+//   }
+
+//   .main-navigation {
+//     align-items: center;
+//   }
+// }
+
+.header {
+  background-color: blue;
+}

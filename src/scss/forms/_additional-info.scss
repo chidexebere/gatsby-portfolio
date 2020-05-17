@@ -1,0 +1,14 @@
+.Additional-info {
+  margin-top: 2em;
+
+  @include tablet {
+    margin: 2rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+  }
+}

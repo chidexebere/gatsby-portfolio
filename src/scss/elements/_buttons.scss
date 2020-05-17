@@ -1,0 +1,31 @@
+.Button-With-Label {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  button {
+    font-size: var(--font-size-m);
+    line-height: var(--font-base-line-height);
+    &:hover {
+      background: var(--button-positive-border);
+      color: var(--button-default-background-hover);
+    }
+  }
+}
+
+.Button {
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  display: block;
+
+  &__outline {
+    background: var(--button-positive-background);
+    border: 1px solid var(--button-positive-border);
+    min-width: 6.25em;
+    padding: 0.625em 1em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    background-color: transparent;
+    color: var(--color-greyscale-dark);
+  }
+}
