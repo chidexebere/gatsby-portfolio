@@ -34,5 +34,46 @@
 // }
 
 .header {
-  background-color: blue;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+  // justify-content: space-between;
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    font-family: "Merienda One", cursive;
+    font-size: var(--font-size-xxl);
+    align-items: center;
+    margin-bottom: 1rem;
+
+    @include desktop {
+      font-size: var(--font-size-xxxl);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: var(--font-size-l);
+    font-weight: bold;
+  }
+
+  &__nav a {
+    padding: 1rem;
+
+    &:hover {
+      color: blue;
+      border-bottom: 5px solid black;
+    }
+
+    &:active {
+      border-bottom: 5px solid red;
+    }
+  }
 }

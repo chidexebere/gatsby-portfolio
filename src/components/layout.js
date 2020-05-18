@@ -59,14 +59,16 @@ class Layout extends React.Component {
           style={{
             marginLeft: `auto`,
             marginRight: `auto`,
-            maxWidth: rhythm(24),
+            maxWidth: rhythm(50),
             padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
           }}
         >
           {/* <header>{header}</header> */}
           <header className="header">
-            <Link to="/">My Portfolio</Link>
-            <nav className="nav">
+            <Link className="header__logo" to="/">
+              Chidiebere Onyegbuchulem
+            </Link>
+            <nav className="header__nav">
               <Link to="/">Home</Link>
               <Link to="/about">About</Link>
               <Link to="/blog">Blog</Link>
@@ -76,7 +78,6 @@ class Layout extends React.Component {
         </div>
         <Footer>
           © {new Date().getFullYear()}, Built with
-          {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </Footer>
       </Wrapper>

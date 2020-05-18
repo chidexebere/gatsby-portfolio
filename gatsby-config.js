@@ -19,6 +19,13 @@ module.exports = {
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sass`,
     {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`Open Sans`, `sans-serif`, `Merienda One`, `cursive`],
+        display: "swap",
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
