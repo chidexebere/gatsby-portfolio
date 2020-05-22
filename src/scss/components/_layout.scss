@@ -1,0 +1,130 @@
+.layout {
+  position: relative;
+  // min-height: 100vh;
+
+  // @include tablet {
+  //   width: 80%;
+  // }
+}
+
+.header {
+  height: 8rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+
+  @include tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 10rem;
+  }
+
+  @include desktop {
+    padding: 0 20rem;
+  }
+
+  &__logo {
+    font-family: "Merienda One", cursive;
+    font-size: var(--font-size-l);
+    align-items: center;
+    margin-top: 1rem;
+
+    @include desktop {
+      // font-size: var(--font-size-l);
+    }
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    font-size: var(--font-size-ml);
+    font-weight: bold;
+  }
+
+  &__nav a {
+    padding: 1rem;
+    color: var(--color-social-linkedin);
+
+    &:hover {
+      color: black;
+      border-bottom: 5px solid black;
+    }
+
+    &:active {
+      border-bottom: 5px solid red;
+    }
+  }
+}
+
+.main {
+  position: relative;
+  top: 8rem;
+  min-height: calc(100vh - 230px);
+}
+
+.home {
+  // height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  font-size: var(--font-size-m);
+  position: relative;
+  bottom: 0;
+  top: 8rem;
+  left: 0;
+  right: 0;
+  height: 15rem;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.social {
+  &__links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 1rem 0 4rem 0;
+
+    @include tablet {
+      justify-content: center;
+    }
+  }
+
+  &__icon {
+    font-size: 3rem;
+
+    @include tablet {
+      margin: 0 2rem;
+    }
+  }
+
+  &__linkedin {
+    color: var(--color-social-linkedin);
+  }
+  &__twitter {
+    color: var(--color-social-twitter);
+  }
+  &__github {
+    color: var(--color-social-base);
+  }
+  &__email {
+    color: var(--color-yellow);
+  }
+
+  &__arrowRight {
+    margin-left: 1rem;
+  }
+}
