@@ -2,10 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
-import Layout from "../components/layout"
+import Layout from "../container/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
-import Button from "../components/button"
+import Button from "../elements/button"
 
 class Blog extends React.Component {
   render() {
@@ -45,7 +45,7 @@ class Blog extends React.Component {
           })}
         </div>
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <Button type="default">Go Home</Button>
         </Link>
       </Layout>
     )

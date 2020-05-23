@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
-import Social from "./social"
+import Social from "../components/social"
 
 class Layout extends React.Component {
   render() {

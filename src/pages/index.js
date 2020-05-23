@@ -2,9 +2,9 @@ import React from "react"
 import { Link } from "gatsby"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
-import Layout from "../components/layout"
+import Layout from "../container/layout"
 import SEO from "../components/seo"
-import Button from "../components/button"
+import Button from "../elements/button"
 import "../scss/styles.scss"
 
 class IndexPage extends React.Component {
@@ -34,7 +34,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="homePage__button">
               <Link to="/about">
-                <Button>
+                <Button type="default">
                   More
                   <FontAwesomeIcon
                     className="social__arrowRight"
