@@ -9,12 +9,13 @@ import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 
 const Social = () => {
   return (
-    <section className="social" role="region" aria-label="social">
+    <section className="social" aria-label="social">
       <div className="social__links">
         <div className="social__icon">
           <a
             href="https://www.linkedin.com/in/onyegbuchulem-chidiebere/"
             target="_blank"
+            rel="noreferrer"
             title="Linkedin Profile"
           >
             <FontAwesomeIcon className="social__linkedin" icon={faLinkedin} />
@@ -24,6 +25,7 @@ const Social = () => {
           <a
             href="https://twitter.com/chidexebere"
             target="_blank"
+            rel="noreferrer"
             title="Follow me on Twitter"
           >
             <FontAwesomeIcon icon={faTwitter} className="social__twitter" />
@@ -33,6 +35,7 @@ const Social = () => {
           <a
             href="https://github.com/chidexebere"
             target="_blank"
+            rel="noreferrer"
             title="Github Projects"
           >
             <FontAwesomeIcon icon={faGithub} className="social__github" />
@@ -42,6 +45,7 @@ const Social = () => {
           <a
             href="mailto:conyegbuchulem@gmail.com"
             target="_blank"
+            rel="noreferrer"
             title="Email me -conyegbuchulem@gmail.com"
           >
             <FontAwesomeIcon icon={faEnvelope} className="social__email" />

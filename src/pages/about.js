@@ -5,9 +5,8 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Button from "../components/button"
-import "../scss/styles.scss"
 
-class IndexPage extends React.Component {
+class AboutPage extends React.Component {
   render() {
     const siteTitle = "Chidiebere Onyegbuchulem Personal Website"
 
@@ -15,7 +14,7 @@ class IndexPage extends React.Component {
       <div className="homePage">
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
-            title="Home"
+            title="About me"
             keywords={[`blog`, `gatsby`, `javascript`, `react`]}
           />
           {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
@@ -50,4 +49,4 @@ class IndexPage extends React.Component {
   }
 }
 
-export default IndexPage
+export default AboutPage

@@ -4,7 +4,6 @@ import styled from "styled-components"
 
 import { rhythm, scale } from "../utils/typography"
 import Social from "./social"
-import "../utils/fontawesome"
 
 class Layout extends React.Component {
   render() {
