@@ -1,47 +1,65 @@
 import React from "react"
-import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
+
 import Layout from "../container/layout"
 import SEO from "../components/seo"
-import Button from "../elements/button"
+import ProfilePic from "../elements/profilePic"
+import Skills from "../components/skills"
+import Experiences from "../components/experiences"
+import Projects from "../components/projects"
 
 class AboutPage extends React.Component {
   render() {
-    const siteTitle = "Chidiebere Onyegbuchulem Personal Website"
+    const siteTitle = "About"
 
     return (
-      <div className="homePage">
+      <div className="aboutPage">
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
             title="About me"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+            keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
           />
-          {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
-          <div className="homePage__content">
-            <div className="homePage__intro">
-              <h1>
-                Hello, I'm Chidi
-                <span role="img" aria-label="wave emoji">
-                  👋
-                </span>
-              </h1>
-              <div className="homePage__introText">
-                <p> A Front-end Developer.</p>
-                <p>I build great experiences on the web.</p>
+          <div className="aboutPage__content">
+            <h1>About</h1>
+            <section className="aboutPage__intro">
+              <div className="aboutPage__introText">
+                <p> I am a frontend developer living in Lagos Nigeria.</p>
+                <p>
+                  Passionate about building and creating great experiences on
+                  the web.
+                </p>
+                <p>
+                  I create fast and accessible web applications with intuitive
+                  user interfaces and functional user experience.
+                </p>
               </div>
-            </div>
-            <div className="homePage__button">
-              <Link to="/about">
-                <Button type="default">
-                  More
-                  <FontAwesomeIcon
-                    className="social__arrowRight"
-                    icon={faArrowRight}
-                  />
-                </Button>
-              </Link>
-            </div>
+              <div className="aboutPage__profilePic">
+                <ProfilePic />
+              </div>
+            </section>
+            <section className="aboutPage__skills">
+              <h1>What I use for development</h1>
+              <Skills />
+            </section>
+            <section className="aboutPage__experience">
+              <h1>Where I have worked</h1>
+              <Experiences />
+            </section>
+            <section className="aboutPage__projects">
+              <h1>Projects I worked on </h1>
+              <Projects />
+            </section>
+            <section className="aboutPage__resume">
+              <h2>
+                You want all these on a single PDF? ...
+                <a
+                  href="https://docs.google.com/document/d/170V3dkL8ip_4PdEmJzdyyZmtTXFUgxvy2eLRjex9kqk/export?format=pdf"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Download Resume
+                </a>
+              </h2>
+            </section>
           </div>
         </Layout>
       </div>

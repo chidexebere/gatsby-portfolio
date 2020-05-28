@@ -3,7 +3,6 @@ body {
   padding: 0;
   color: var(--body-text-color);
   font-family: var(--font-main);
-  // font-size: 1.5rem;
   line-height: var(--font-base-line-height);
   background-color: var(--color-greyscale-light);
 }
@@ -16,10 +15,12 @@ a {
   text-decoration: none;
   display: inline-block;
   box-shadow: none;
-  color: var(--color-black);
-  // padding: 1rem 2rem;
 
   &:hover {
     text-decoration: none;
   }
+}
+
+p {
+  font-size: 1.5rem;
 }

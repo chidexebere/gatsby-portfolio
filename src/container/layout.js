@@ -1,7 +1,5 @@
 import React from "react"
 import { Link } from "gatsby"
-import styled from "styled-components"
-
 import { rhythm, scale } from "../utils/typography"
 import Social from "../components/social"
 
@@ -47,14 +45,5 @@ class Layout extends React.Component {
     )
   }
 }
-
-// const Wrapper = styled.div`
-//   min-height: 100vh;
-// `
-
-// const Footer = styled.footer`
-//   text-align: center;
-//   margin: 24px;
-// `
 
 export default Layout

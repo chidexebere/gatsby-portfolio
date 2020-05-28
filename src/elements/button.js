@@ -1,10 +1,17 @@
 import React from "react"
 
 const Button = props => {
-  const computedClass = `button ${props.type}`
+  const { open, selectedId, id } = props
+  const addedClass = selectedId === id && open === true ? "active" : "default"
+  const computedClass = `button ${addedClass}`
+
+  const handleOnClick = e => {
+    e.preventDefault()
+    props.handleOnClick(props.id)
+  }
 
   return (
-    <button className={computedClass} onClick={props.handleOnClick}>
+    <button className={computedClass} onClick={handleOnClick}>
       {props.children}
     </button>
   )

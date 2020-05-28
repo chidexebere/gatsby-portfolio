@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sass`,
+    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -37,6 +38,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/assets`,
         name: `assets`,
+      },
+    },
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `skills`,
+        path: `${__dirname}/data`,
       },
     },
     {

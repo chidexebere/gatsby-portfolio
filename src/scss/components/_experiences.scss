@@ -1,0 +1,24 @@
+.experienceList {
+  background-color: var(--color-white);
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+
+  @include tablet {
+    padding: 1rem 4rem;
+  }
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__position {
+    font-weight: 600;
+  }
+
+  &__description {
+    margin-bottom: 3rem;
+  }
+}

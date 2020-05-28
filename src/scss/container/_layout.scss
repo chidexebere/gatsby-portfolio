@@ -1,10 +1,5 @@
 .layout {
   position: relative;
-  // min-height: 100vh;
-
-  // @include tablet {
-  //   width: 80%;
-  // }
 }
 
 .header {
@@ -33,19 +28,16 @@
   &__logo {
     font-family: "Merienda One", cursive;
     font-size: var(--font-size-l);
+    color: var(--color-black);
     align-items: center;
     margin-top: 1rem;
-
-    @include desktop {
-      // font-size: var(--font-size-l);
-    }
   }
 
   &__nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    font-size: var(--font-size-ml);
+    font-size: var(--font-size-xxm);
     font-weight: bold;
   }
 
@@ -65,27 +57,36 @@
 }
 
 .main {
+  height: 100%;
   position: relative;
   top: 8rem;
-  min-height: calc(100vh - 230px);
+  min-height: calc(100vh - 200px);
+  padding: 0 3rem;
+  margin-bottom: 5rem;
+
+  @include tablet {
+    padding: 0 10rem;
+  }
+
+  @include desktop {
+    padding: 0 20rem;
+  }
 }
 
 .home {
-  // height: 100%;
-
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .footer {
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-xm);
   position: relative;
   bottom: 0;
   top: 8rem;
   left: 0;
   right: 0;
-  height: 15rem;
+  height: 12rem;
   text-align: center;
   background-color: black;
   color: white;

@@ -1,0 +1,13 @@
+.aboutPage {
+  &__intro {
+    @include tablet {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__profilePic {
+    text-align: center;
+  }
+}

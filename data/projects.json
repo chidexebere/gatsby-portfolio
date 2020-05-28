@@ -1,0 +1,70 @@
+[
+  {
+    "type": "Personal",
+    "projects": [
+      {
+        "name": "Restaurant Review",
+        "description": "A progressive web app that allows users to search for a restaurant, display its location on a map and make reviews.",
+        "technologyUsed": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NodeJS",
+          "Progressive Enhancement",
+          "Gulp",
+          "Mapbox API",
+          "Restdb",
+          "Firebase"
+        ],
+        "url": "https://restaurant-reviews-2.web.app/"
+      },
+      {
+        "name": "Airbnb Clone",
+        "description": "A web app that allows users to search for an apartment and display its location on google maps using markers",
+        "technologyUsed": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Google Maps API",
+          "Firebase"
+        ],
+        "url": "https://airbnb-clone-5.web.app/"
+      }
+    ]
+  },
+
+  {
+    "type": "Open Source",
+    "projects": [
+      {
+        "name": "Vocabulary",
+        "description": "Creative Commons web design system",
+        "technologyUsed": [
+          "HTML",
+          "CSS",
+          "SASS",
+          "JavaScript",
+          "Vue",
+          "NodeJS",
+          "Bulma",
+          "Webpack",
+          "Docker",
+          "Figma",
+          "Storybook"
+        ],
+        "url": "https://cc-vocabulary.netlify.app/"
+      }
+    ]
+  },
+
+  {
+    "type": "Legacy",
+    "projects": [
+      {
+        "name": "Idearoom",
+        "description": "A tool to digitally organise internal processes within an organization",
+        "technologyUsed": ["HTML", "CSS/SCSS", "JavaScript", "React", "Redux"]
+      }
+    ]
+  }
+]

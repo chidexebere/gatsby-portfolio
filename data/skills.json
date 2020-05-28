@@ -1,0 +1,30 @@
+[
+  {
+    "title": "Web Languages",
+    "list": ["HTML", "CSS/SCSS", "JavaScript", "TypeScript"]
+  },
+  {
+    "title": "Frameworks",
+    "list": ["React", "Redux", "Vue", "NodeJS", "JQuery", "Bootstrap", "Bulma"]
+  },
+  {
+    "title": "Tools/Technologies",
+    "list": [
+      "Git/GitHub",
+      "REST",
+      "GraphQL",
+      "Gulp",
+      "Webpack",
+      "Jest",
+      "Docker",
+      "Figma",
+      "Storybook",
+      "Firebase",
+      "Gatsby"
+    ]
+  },
+  {
+    "title": "Operating System",
+    "list": ["Windows", "Linux (Ubuntu)"]
+  }
+]

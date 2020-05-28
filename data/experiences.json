@@ -1,0 +1,58 @@
+[
+  {
+    "company": "Creative Commons",
+    "details": [
+      {
+        "position": "Open Source Project Member",
+        "duration": "May 2020 - present",
+        "description": ["Continue to contribute to Vocabulary"]
+      },
+      {
+        "position": "Outreachy Software Engineering Intern (Remote)",
+        "duration": "Dec 2019 - March 2020",
+        "description": [
+          "Contributed to revamping Creative Commons's new design system; Vocabulary",
+          "Contributed to extending the usage of Vocabulary to other Creative Commons platforms"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Innoloft GmbH",
+    "details": [
+      {
+        "position": "Frontend Developer (Remote)",
+        "duration": "Feb 2020 - March 2020",
+        "description": [
+          "Developed Idearoom; a tool to digitally organise internal processes",
+          "Contributed to integrating Idearoom to Innoloft main whitelabel react application"
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Freelance",
+    "details": [
+      {
+        "position": "Frontend Developer",
+        "duration": "Jan 2018 - Nov 2019",
+        "description": ["Built responsive and progressive web applicaions"]
+      }
+    ]
+  },
+
+  {
+    "company": "Swift Networks",
+    "details": [
+      {
+        "position": "Network Engineer",
+        "duration": "Aug 2014 - Sept 2018",
+        "description": [
+          "Deployed fibre and wireless internet solutions to customers",
+          "Technical support"
+        ]
+      }
+    ]
+  }
+]
