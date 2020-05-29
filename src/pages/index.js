@@ -16,9 +16,8 @@ class IndexPage extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
             title="Home"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+            keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
           />
-          {/* <img style={{ margin: 0 }} src="./GatsbyScene.svg" alt="Gatsby Scene" /> */}
           <div className="homePage__content">
             <div className="homePage__intro">
               <h1>
@@ -34,7 +33,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="homePage__button">
               <Link to="/about">
-                <Button type="default">
+                <Button>
                   More
                   <FontAwesomeIcon
                     className="social__arrowRight"

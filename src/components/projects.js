@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { graphql, useStaticQuery } from "gatsby"
-import Button from "../elements/button"
 import ProjectDetails from "./projectDetails"
+import ButtonAccordion from "../elements/buttonAccordion"
 
 const Projects = () => {
   const data = useStaticQuery(graphql`
@@ -39,14 +39,14 @@ const Projects = () => {
 
         return (
           <div key={id} className="experiences">
-            <Button
+            <ButtonAccordion
               id={id}
               open={open}
               selectedId={selected}
               handleOnClick={toggleSkills}
             >
               {type}
-            </Button>
+            </ButtonAccordion>
             <ProjectDetails
               id={id}
               projects={projects}
