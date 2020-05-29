@@ -22,7 +22,7 @@ class Blog extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
-                <h3
+                <h2
                   style={{
                     marginBottom: rhythm(1 / 4),
                   }}
@@ -33,7 +33,7 @@ class Blog extends React.Component {
                   >
                     {title}
                   </Link>
-                </h3>
+                </h2>
                 <small>{node.frontmatter.date}</small>
                 <p
                   dangerouslySetInnerHTML={{
@@ -45,7 +45,7 @@ class Blog extends React.Component {
           })}
         </div>
         <Link to="/">
-          <Button type="default">Go Home</Button>
+          <Button>Go Home</Button>
         </Link>
       </Layout>
     )

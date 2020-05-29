@@ -1,31 +1,23 @@
 import React from "react"
 import { Link } from "gatsby"
-import { rhythm, scale } from "../utils/typography"
 import Social from "../components/social"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
-    // const blogPath = `${__PATH_PREFIX__}/blog/`
+    const blogPath = `${__PATH_PREFIX__}/blog`
     let main
 
     if (location.pathname === rootPath) {
       main = <main className="main home">{children}</main>
+    } else if (location.pathname === blogPath) {
+      main = <main className="main blog">{children}</main>
     } else {
       main = <main className="main">{children}</main>
     }
     return (
-      <div
-        className="layout"
-        // style={{
-        //   marginLeft: `auto`,
-        //   marginRight: `auto`,
-        //   maxWidth: rhythm(50),
-        //   padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        // }}
-      >
-        {/* <header>{header}</header> */}
+      <div className="layout">
         <header className="header">
           <Link className="header__logo" to="/">
             Chidiebere Onyegbuchulem
