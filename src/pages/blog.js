@@ -34,8 +34,9 @@ class Blog extends React.Component {
                     {title}
                   </Link>
                 </h2>
-                <small>{node.frontmatter.date}</small>
+                <small className="blog__date">{node.frontmatter.date}</small>
                 <p
+                  className="blog__body"
                   dangerouslySetInnerHTML={{
                     __html: node.frontmatter.description || node.excerpt,
                   }}
