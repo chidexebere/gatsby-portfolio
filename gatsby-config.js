@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
     // edit below
-    title: `My Personal Portfolio Website`,
+    title: `My Portfolio Website`,
     author: `Chidiebere Onyegbuchulem`,
     description: `My personal portfolio website and blog with Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    siteUrl: `https://conye.netlify.app/`,
     social: {
       linkedin: `https://www.linkedin.com/in/onyegbuchulem-chidiebere/`,
       twitter: `https://twitter.com/chidexebere`,
