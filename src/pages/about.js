@@ -24,8 +24,8 @@ class AboutPage extends React.Component {
               <div className="aboutPage__introText">
                 <p> I am a frontend developer living in Lagos Nigeria.</p>
                 <p>
-                  Passionate about building and creating great experiences on
-                  the web.
+                  I love solving problems and I am passionate about building
+                  great experiences on the web.
                 </p>
                 <p>
                   I create fast and accessible web applications with intuitive
