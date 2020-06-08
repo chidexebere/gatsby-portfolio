@@ -93,7 +93,7 @@ module.exports = {
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#000000`,
-        display: `minimal-ui`,
+        display: `standalone`,
         // edit below
         icon: `content/assets/profile-pic.jpg`,
       },
