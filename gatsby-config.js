@@ -91,7 +91,7 @@ module.exports = {
         name: `Chidexebere Portfolio Website`,
         short_name: `Chidexebere`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#f3f3f3`,
         theme_color: `#000000`,
         display: `standalone`,
         // edit below
