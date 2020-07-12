@@ -31,7 +31,7 @@ class Layout extends React.Component {
         <>{main}</>
 
         <footer className="footer">
-          <Social /> © {new Date().getFullYear()}
+          <Social />
         </footer>
       </div>
     )
