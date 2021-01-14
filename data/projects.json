@@ -3,6 +3,18 @@
     "type": "Personal",
     "projects": [
       {
+        "name": "Learn Everyday",
+        "description": "A quiz web app that helps students prepare for A-level examinations.",
+        "technologyUsed": [
+          "HTML",
+          "SCSS",
+          "TypeScript",
+          "React",
+          "Netlify"
+        ],
+        "url": "https://learn-everyday.netlify.app/"
+      },
+      {
         "name": "Restaurant Review",
         "description": "A progressive web app that allows users to search for a restaurant, display its location on a map and make reviews.",
         "technologyUsed": [
