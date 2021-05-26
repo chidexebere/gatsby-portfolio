@@ -5,7 +5,16 @@
   },
   {
     "title": "Frameworks",
-    "list": ["React", "Redux", "Vue", "NodeJS", "JQuery", "Bootstrap", "Bulma"]
+    "list": [
+      "React",
+      "Redux",
+      "Vue",
+      "NodeJS",
+      "JQuery",
+      "Bootstrap",
+      "Bulma",
+      "Tailwind"
+    ]
   },
   {
     "title": "Tools/Technologies",
