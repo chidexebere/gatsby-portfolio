@@ -1,7 +1,9 @@
 import React from "react"
 
 const Button = props => {
-  return <button className="button">{props.children}</button>
+  const { variant, children } = props
+  const computedClass = variant ? `button ${variant}` : `button`
+  return <button className={computedClass}>{children}</button>
 }
 
 export default Button

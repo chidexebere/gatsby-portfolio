@@ -33,7 +33,7 @@ class IndexPage extends React.Component {
             </div>
             <div className="homePage__button">
               <Link to="/about">
-                <Button>
+                <Button variant="shadow">
                   More
                   <FontAwesomeIcon
                     className="social__arrowRight"
