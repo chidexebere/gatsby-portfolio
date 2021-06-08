@@ -5,14 +5,20 @@
       {
         "name": "Learn Everyday",
         "description": "A quiz web app that helps students prepare for A-level examinations.",
+        "technologyUsed": ["HTML", "SCSS", "TypeScript", "React", "Netlify"],
+        "url": "https://learn-everyday.netlify.app/"
+      },
+      {
+        "name": "Search GitHub Profiles",
+        "description": "A GitHub profile page clone. You search for a GitHub profile using a GitHub account username.",
         "technologyUsed": [
           "HTML",
-          "SCSS",
-          "TypeScript",
-          "React",
+          "CSS",
+          "JavaScript",
+          "GraphQL GitHub API",
           "Netlify"
         ],
-        "url": "https://learn-everyday.netlify.app/"
+        "url": "https://chidexebere-search-github-profiles.netlify.app/"
       },
       {
         "name": "Restaurant Review",
