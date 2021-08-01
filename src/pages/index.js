@@ -6,10 +6,18 @@ import Layout from "../container/layout"
 import SEO from "../components/seo"
 import Button from "../elements/button"
 import "../scss/styles.scss"
+import TypeWriter from "../components/typewriter"
 
 class IndexPage extends React.Component {
   render() {
     const siteTitle = "Chidiebere Onyegbuchulem Personal Website"
+    const staticText = [`I'm a Front-end Developer.`, "I care about"]
+    const words = [
+      "user experience",
+      "accessibility",
+      "performance",
+      "best practice ",
+    ]
 
     return (
       <div className="homePage">
@@ -27,8 +35,7 @@ class IndexPage extends React.Component {
                 </span>
               </h1>
               <div className="homePage__introText">
-                <p> A Front-end Developer.</p>
-                <p>I build great experiences on the web.</p>
+                <TypeWriter staticText={staticText} words={words} />
               </div>
             </div>
             <div className="homePage__button">

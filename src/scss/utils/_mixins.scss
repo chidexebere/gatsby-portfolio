@@ -1,4 +1,4 @@
-$tablet: 700px;
+$tablet: 768px;
 @mixin tablet {
   @media (min-width: #{$tablet}) {
     @content;

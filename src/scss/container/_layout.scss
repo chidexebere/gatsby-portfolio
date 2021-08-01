@@ -12,9 +12,11 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: white;
+  background-color: var(--color-greyscale-mid);
+  border-bottom: 5px solid var(--color-white);
 
   @include tablet {
+    height: 6rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -31,6 +33,10 @@
     color: var(--color-black);
     align-items: center;
     margin-top: 1rem;
+
+    &:hover {
+      color: var(--color-black);
+    }
   }
 
   &__nav {
@@ -46,12 +52,12 @@
     color: var(--color-social-linkedin);
 
     &:hover {
-      color: black;
-      border-bottom: 5px solid black;
+      color: var(--color-black);
+      border-bottom: 5px solid var(--color-black);
     }
 
     &:active {
-      border-bottom: 5px solid red;
+      border-bottom: 5px solid var(--color-red);
     }
   }
 }

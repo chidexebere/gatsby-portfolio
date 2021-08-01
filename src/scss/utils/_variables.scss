@@ -1,4 +1,13 @@
 :root {
+  --color-green-1: #2e7763;
+  --color-green-2: #48be9d;
+  --color-yellow: #f8c300;
+  --color-red: #d02826;
+  --color-red-2: #962a2a;
+  --color-blue: #4577ce;
+  --color-black: #000;
+  --color-white: #fff;
+  --color-grey: #4a4a4a;
   --color-brand-base: #297763;
   --color-primary-light: #a9e0d4;
   --color-primary-bright: #2cb798;
@@ -35,19 +44,10 @@
   --color-warning-light: var(--color-secondary-light);
   --color-warning-base: var(--color-secondary-base);
   --color-warning-dark: var(--color-secondary-dark);
-  --color-green-1: #2e7763;
-  --color-green-2: #48be9d;
-  --color-yellow: #f8c300;
-  --color-red: #d02826;
-  --color-red-2: #962a2a;
-  --color-blue: #4577ce;
-  --color-black: #000;
-  --color-white: #fff;
-  --color-grey: #4a4a4a;
-  --body-text-color: var(--color-grey);
-  --body-background-color: var(--color-white);
+  --body-text-color: var(--color-white);
+  --body-background-color: var(--color-grey);
   --links-color: var(--color-primary-bright);
-  --links-color-hover: var(--color-primary-bright);
+  --links-color-hover: var(--color-primary-base);
   --color-focus: #228ae6;
   --font-main: "Open Sans", sans-serif;
   --font-base-line-height: 1.4;

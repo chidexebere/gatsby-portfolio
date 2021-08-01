@@ -4,7 +4,7 @@ body {
   color: var(--body-text-color);
   font-family: var(--font-main);
   line-height: var(--font-base-line-height);
-  background-color: var(--color-greyscale-light);
+  background-color: var(--color-grey);
 }
 
 hr {
@@ -15,16 +15,14 @@ a {
   text-decoration: none;
   display: inline-block;
   box-shadow: none;
+  color: var(--links-color);
 
   &:hover {
     text-decoration: none;
+    color: var(--links-color-hover);
   }
 }
 
 p {
   font-size: 1.6rem;
-}
-
-span {
-  font-size: 1.25rem;
 }

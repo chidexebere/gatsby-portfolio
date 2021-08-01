@@ -1,17 +1,12 @@
 [
   {
-    "title": "Web Languages",
-    "list": ["HTML", "CSS/SCSS", "JavaScript", "TypeScript"]
-  },
-  {
-    "title": "Frameworks",
+    "title": "Web Technologies",
     "list": [
-      "React",
-      "Redux",
-      "Vue",
+      "HTML & CSS/SCSS",
+      "JavaScript",
+      "TypeScript",
+      "React/Redux",
       "NodeJS",
-      "JQuery",
-      "Bootstrap",
       "Bulma",
       "Tailwind"
     ]
@@ -20,20 +15,13 @@
     "title": "Tools/Technologies",
     "list": [
       "Git/GitHub",
-      "REST",
-      "GraphQL",
-      "Gulp",
-      "Webpack",
+      "REST/GraphQL",
+      "Gulp/Webpack",
       "Jest",
-      "Docker",
-      "Figma",
       "Storybook",
-      "Firebase",
-      "Gatsby"
+      "Firebase/Netlify",
+      "Gatsby",
+      "Figma"
     ]
-  },
-  {
-    "title": "Operating System",
-    "list": ["Windows", "Linux (Ubuntu)"]
   }
 ]
