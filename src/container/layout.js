@@ -7,11 +7,15 @@ class Layout extends React.Component {
     const { location, children } = this.props
     const rootPath = `${__PATH_PREFIX__}/`
     const aboutPath = `${__PATH_PREFIX__}/about`
+    const aboutPathSlash = `${__PATH_PREFIX__}/about/`
     let main
 
     if (location.pathname === rootPath) {
       main = <main className="main home">{children}</main>
-    } else if (location.pathname === aboutPath) {
+    } else if (
+      location.pathname === aboutPath ||
+      location.pathname === aboutPathSlash
+    ) {
       main = <main className="main">{children}</main>
     } else {
       main = <main className="main blog">{children}</main>
