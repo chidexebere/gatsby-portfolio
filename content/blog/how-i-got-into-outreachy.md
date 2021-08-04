@@ -6,7 +6,7 @@ description: "Outreachy Series Part 1: This is a short description of how a got
   into the Outreachy program"
 ---
 
-I applied to Outreachy after seeing a tweet from Anjana Vakil; an Outreachy alum. My main motivation was these words: “APPLY! Even if you don’t get in, you’ll get your 1st contribution under your belt!”. This was because I was looking for ways I could build and develop my skills. This is my second week as an Outreachy Intern with Creative Commons working on “Extend the scope and/or usage of CC Vocabulary” project and am pleased to share my journey.
+I applied to Outreachy after seeing a tweet from [Anjana Vakil](https://twitter.com/AnjanaVakil); an Outreachy alum. My main motivation was these words: _ “APPLY! Even if you don’t get in, you’ll get your 1st contribution under your belt!” _. This was because I was looking for ways I could build and develop my skills. This is my second week as an Outreachy Intern with Creative Commons working on “Extend the scope and/or usage of CC Vocabulary” project and am pleased to share my journey.
 
 ## Outreachy! Outreachy!! Outreachy!!!, What is Outreachy?
 
@@ -26,6 +26,6 @@ The application process for Outreachy is in three phases:
 
 After the application process, I continued contributing. My aim here was to learn and challenge myself, I did not know I was going to be accepted but I am happy I got in.
 
-Thank you Outreachy and the team at Creative Commons for this opportunity. Special thanks to my mentors Dhruv Bhanushali and Hugo Solar and Creative Commons Outreachy coordinator; Kriti Godey for their support through my application process. Also congratulations to my fellow interns. I can not wait to read about your experiences.
+Thank you Outreachy and the team at Creative Commons for this opportunity. Special thanks to my mentors [Dhruv Bhanushali](https://www.linkedin.com/in/dhruvkb/) and [Hugo Solar](https://www.linkedin.com/in/hugosolar/) and Creative Commons Outreachy coordinator; [Kriti Godey](https://www.linkedin.com/in/kritigodey/) for their support through my application process. Also congratulations to my fellow interns. I can not wait to read about your experiences.
 
 Well that said, I have got my first task to complete; see you in two weeks.

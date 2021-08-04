@@ -23,7 +23,7 @@ class BlogPostTemplate extends React.Component {
         <p
           className="blog__date"
           style={{
-            ...scale(-1 / 5),
+            ...scale(1 / 5),
             display: `block`,
             marginBottom: rhythm(1),
             marginTop: rhythm(-1),
@@ -40,6 +40,7 @@ class BlogPostTemplate extends React.Component {
         <Bio />
 
         <ul
+          className="blog__navList"
           style={{
             display: `flex`,
             flexWrap: `wrap`,
