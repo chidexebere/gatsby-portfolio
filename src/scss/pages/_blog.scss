@@ -1,5 +1,8 @@
 .blog {
-  &__date,
+  &__date {
+    font-size: 1.4rem;
+    color: var(--color-tertiary-light);
+  }
   &__code {
     font-size: 1rem;
   }
