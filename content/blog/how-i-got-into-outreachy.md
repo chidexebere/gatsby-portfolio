@@ -2,7 +2,8 @@
 path: how_I_got_into_outreachy
 date: 2019-12-11T12:26:01.270Z
 title: How I got into Outreachy
-description: This gives a short description of how a got into the Outreachy program
+description: "Outreachy Series Part 1: This is a short description of how a got
+  into the Outreachy program"
 ---
 
 I applied to Outreachy after seeing a tweet from Anjana Vakil; an Outreachy alum. My main motivation was these words: “APPLY! Even if you don’t get in, you’ll get your 1st contribution under your belt!”. This was because I was looking for ways I could build and develop my skills. This is my second week as an Outreachy Intern with Creative Commons working on “Extend the scope and/or usage of CC Vocabulary” project and am pleased to share my journey.
