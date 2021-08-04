@@ -1,6 +1,6 @@
 ---
 path: how_I_got_into_outreachy
-date: 2021-08-04T12:26:01.270Z
+date: 2019-12-11T12:26:01.270Z
 title: HOW I GOT INTO OUTREACHY
 description: This gives a short description of how a got into the Outreachy program
 ---
