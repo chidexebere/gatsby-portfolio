@@ -18,7 +18,10 @@ const Social = () => {
             rel="noreferrer"
             title="Linkedin Profile"
           >
-            <FontAwesomeIcon className="social__linkedin" icon={faLinkedin} />
+            <FontAwesomeIcon
+              className="icon social__linkedin"
+              icon={faLinkedin}
+            />
           </a>
         </div>
         <div className="social__icon">
@@ -28,7 +31,10 @@ const Social = () => {
             rel="noreferrer"
             title="Follow me on Twitter"
           >
-            <FontAwesomeIcon icon={faTwitter} className="social__twitter" />
+            <FontAwesomeIcon
+              icon={faTwitter}
+              className="icon social__twitter"
+            />
           </a>
         </div>
         <div className="social__icon">
@@ -38,7 +44,7 @@ const Social = () => {
             rel="noreferrer"
             title="Github Projects"
           >
-            <FontAwesomeIcon icon={faGithub} className="social__github" />
+            <FontAwesomeIcon icon={faGithub} className="icon social__github" />
           </a>
         </div>
         <div className="social__icon">
@@ -48,7 +54,7 @@ const Social = () => {
             rel="noreferrer"
             title="Email me -conyegbuchulem@gmail.com"
           >
-            <FontAwesomeIcon icon={faEnvelope} className="social__email" />
+            <FontAwesomeIcon icon={faEnvelope} className="icon social__email" />
           </a>
         </div>
       </div>

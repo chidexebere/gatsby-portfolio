@@ -103,6 +103,10 @@
   color: white;
 }
 
+.icon {
+  color: var(--color-greyscale-mid-dark);
+}
+
 .social {
   &__links {
     display: flex;
@@ -124,16 +128,24 @@
   }
 
   &__linkedin {
-    color: var(--color-social-linkedin);
+    &:hover {
+      color: var(--color-social-linkedin);
+    }
   }
   &__twitter {
-    color: var(--color-social-twitter);
+    &:hover {
+      color: var(--color-social-twitter);
+    }
   }
   &__github {
-    color: var(--color-social-base);
+    &:hover {
+      color: var(--color-social-base);
+    }
   }
   &__email {
-    color: var(--color-yellow);
+    &:hover {
+      color: var(--color-yellow);
+    }
   }
 
   &__arrowRight {
