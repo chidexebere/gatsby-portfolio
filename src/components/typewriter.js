@@ -77,9 +77,9 @@ class TypeWriter extends React.Component {
             {sentence}&nbsp;
           </span>
         ))}
-        <span className={`dynamic-text ${isWaiting ? "fade" : ""}`}>
+        <mark className={`dynamic-text ${isWaiting ? "fade" : ""}`}>
           {text}
-        </span>
+        </mark>
       </div>
     )
   }

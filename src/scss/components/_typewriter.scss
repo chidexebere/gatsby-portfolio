@@ -21,8 +21,9 @@
 }
 
 .dynamic-text {
+  font-size: var(--font-size-l);
   position: relative;
-  color: var(--color-tertiary-light);
+  color: var(--color-black);
 
   &:after {
     content: "|";
