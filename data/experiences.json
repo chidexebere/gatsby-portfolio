@@ -5,14 +5,19 @@
       {
         "position": "Open Source Project Member",
         "duration": "May 2020 - present",
-        "description": ["Continue to contribute to Vocabulary"]
+        "description": [
+          "Continue to contribute to the growth and usage of Vocabulary. Fixing issues, adding new features and making code reviews",
+          "Attend open source community review meetings"
+        ]
       },
       {
         "position": "Outreachy Software Engineering Intern (Remote)",
         "duration": "Dec 2019 - March 2020",
         "description": [
-          "Contributed to revamping Creative Commons's new design system; Vocabulary. Building and organising each UI component with Storybook",
-          "Contributed to extending the usage of Vocabulary to other Creative Commons platforms"
+          "Contributed to revamping Creative Commons's new design system; Vocabulary. Building and organising each UI component, fixing issues and adding new features from Figma mockups",
+          "Learned new technical skills (Vue, Storybook, Bulma)",
+          "Improved soft skills in communication, time management and problem solving",
+          "Worked with other developers to extend the usage of Vocabulary to other Creative Commons platforms"
         ]
       }
     ]
@@ -26,7 +31,8 @@
         "duration": "Feb 2020 - March 2020",
         "description": [
           "Developed Idearoom; a tool for businesses and teams to organize their project ideas, plan and analysis",
-          "Contributed to integrating Idearoom to Innoloft main whitelabel react application"
+          "I worked majorly with the Lead frontend developer on the frontend using React, Redux and React-i18next",
+          "Also worked with other developers to integrate Idealroom to the Innoloft main whitelabel react application"
         ]
       }
     ]
