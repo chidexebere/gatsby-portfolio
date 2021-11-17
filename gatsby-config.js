@@ -43,6 +43,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/images`,
+        name: `images`,
+      },
+    },
+    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: `skills`,
@@ -57,7 +64,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 700,
             },
           },
           {
