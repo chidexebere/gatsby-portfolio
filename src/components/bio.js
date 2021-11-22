@@ -1,63 +1,56 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-import { rhythm } from "../utils/typography"
+/**
+ * Bio component that queries for data
+ * with Gatsby's useStaticQuery component
+ *
+ * See: https://www.gatsbyjs.com/docs/use-static-query/
+ */
 
-function Bio() {
+import * as React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
+
+const Bio = () => {
+  const data = useStaticQuery(graphql`
+    query BioQuery {
+      site {
+        siteMetadata {
+          author {
+            name
+            summary
+          }
+          social {
+            twitter
+          }
+        }
+      }
+    }
+  `)
+  const author = data.site.siteMetadata?.author
+  const social = data.site.siteMetadata?.social
+
   return (
-    <StaticQuery
-      query={bioQuery}
-      render={data => {
-        const { author, social } = data.site.siteMetadata
-        return (
-          <div className="bio">
-            <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginRight: rhythm(1 / 2),
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            />
-            <div className="bio__text">
-              <span>I learn, code and write.</span>
-              <span>
-                Tweet
-                <a href={social.twitter}>
-                  <strong>@chidexebere</strong>
-                </a>
-              </span>
-            </div>
-          </div>
-        )
-      }}
-    />
+    <div className="bio">
+      <StaticImage
+        className="bio__avatar"
+        layout="fixed"
+        formats={["auto", "webp", "avif"]}
+        src="../images/profile-pic.jpg"
+        width={50}
+        height={50}
+        quality={95}
+        alt="Profile picture"
+      />
+      {author?.name && (
+        <p>
+          <strong>{author?.summary || null}</strong>
+          {` `}
+          <a href={`https://twitter.com/${social?.twitter || ``}`}>
+            You can follow me on Twitter
+          </a>
+        </p>
+      )}
+    </div>
   )
 }
-
-const bioQuery = graphql`
-  query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        author
-        social {
-          twitter
-        }
-      }
-    }
-  }
-`
 
 export default Bio

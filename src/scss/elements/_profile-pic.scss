@@ -44,3 +44,8 @@
   left: 0;
   transition: max-height 0.4s linear;
 }
+
+.profile__pic {
+  border-radius: 100%;
+  min-width: 14rem;
+}

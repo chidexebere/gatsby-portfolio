@@ -3,54 +3,70 @@ import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../container/layout"
-import SEO from "../components/seo"
-import { rhythm } from "../utils/typography"
+import Seo from "../components/seo"
 import Button from "../elements/button"
 
-class Blog extends React.Component {
-  render() {
-    const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
-    const posts = data.allMdx.edges
+const Blog = ({ data, location }) => {
+  const siteTitle =
+    data?.site.siteMetadata?.title ||
+    "Chidiebere Onyegbuchulem Personal Website"
+  const posts = data.allMarkdownRemark.nodes
 
+  if (posts?.length === 0) {
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+      <Layout location={location} title={siteTitle}>
+        <Seo title="All posts" />
         <Bio />
-        <div style={{ margin: "20px 0 40px" }}>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                <h2
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h2>
-                <small className="blog__date">{node.frontmatter.date}</small>
-                <p
-                  className="blog__body"
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
-            )
-          })}
-        </div>
-        <Link to="/">
-          <Button>Go Home</Button>
-        </Link>
+        <p>
+          No blog posts found. Add markdown posts to "content/blog" (or the
+          directory you specified for the "gatsby-source-filesystem" plugin in
+          gatsby-config.js).
+        </p>
       </Layout>
     )
   }
+
+  return (
+    <Layout location={location} title={siteTitle}>
+      <Seo title="All posts" />
+      <Bio />
+      <ol style={{ listStyle: `none` }}>
+        {posts.map(post => {
+          const title = post.frontmatter.title || post.fields.slug
+          return (
+            <li key={post.fields.slug}>
+              <article
+                className="post-list-item"
+                itemScope
+                itemType="http://schema.org/Article"
+              >
+                <header>
+                  <h2>
+                    <Link to={post.fields.slug} itemProp="url">
+                      <span itemProp="headline">{title}</span>
+                    </Link>
+                  </h2>
+                  <small className="blog__date">{post.frontmatter.date}</small>
+                </header>
+                <section>
+                  <p
+                    className="blog__body"
+                    dangerouslySetInnerHTML={{
+                      __html: post.frontmatter.description || post.excerpt,
+                    }}
+                    itemProp="description"
+                  />
+                </section>
+              </article>
+            </li>
+          )
+        })}
+      </ol>
+      <Link to="/">
+        <Button>Go Home</Button>
+      </Link>
+    </Layout>
+  )
 }
 
 export default Blog
@@ -62,18 +78,16 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
-      edges {
-        node {
-          excerpt
-          fields {
-            slug
-          }
-          frontmatter {
-            date(formatString: "MMMM DD, YYYY")
-            title
-            description
-          }
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      nodes {
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          date(formatString: "MMMM DD, YYYY")
+          title
+          description
         }
       }
     }
