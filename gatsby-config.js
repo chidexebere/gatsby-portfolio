@@ -1,9 +1,12 @@
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `My Portfolio Website`,
-    author: `Chidiebere Onyegbuchulem`,
-    description: `My personal portfolio website and blog with Netlify CMS.`,
+    title: `Chidiebere Onyegbuchulem Personal Website`,
+    author: {
+      name: `Chidiebere Onyegbuchulem`,
+      summary: `I learn, code and write.`,
+    },
+    description: `Chidiebere Onyegbuchulem personal portfolio website and blog.`,
+
     siteUrl: `https://conye.netlify.app/`,
     social: {
       linkedin: `https://www.linkedin.com/in/onyegbuchulem-chidiebere/`,
@@ -13,14 +16,15 @@ module.exports = {
     },
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-transformer-sharp`,
+    `gatsby-transformer-json`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-sass`,
-    `gatsby-transformer-json`,
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
@@ -36,31 +40,23 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/assets`,
-        name: `assets`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/images`,
-        name: `images`,
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: `skills`,
+        name: `site-data`,
         path: `${__dirname}/data`,
       },
     },
     {
-      resolve: `gatsby-plugin-mdx`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        extensions: [".mdx", ".md"],
-        gatsbyRemarkPlugins: [
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -73,43 +69,87 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          `gatsby-remark-prismjs`,
+          `gatsby-remark-copy-linked-files`,
+          `gatsby-remark-smartypants`,
+        ],
+      },
+    },
+    // {
+    //   resolve: `gatsby-plugin-google-analytics`,
+    //   options: {
+    // edit below
+    // trackingId: `ADD YOUR TRACKING ID HERE`,
+    //   },
+    // },
+    {
+      resolve: `gatsby-plugin-feed`,
+      options: {
+        query: `
           {
-            resolve: `gatsby-remark-vscode`,
-          },
+            site {
+              siteMetadata {
+                title
+                description
+                siteUrl
+                site_url: siteUrl
+              }
+            }
+          }
+        `,
+        feeds: [
           {
-            resolve: `gatsby-remark-copy-linked-files`,
-          },
-          {
-            resolve: `gatsby-remark-smartypants`,
+            serialize: ({ query: { site, allMarkdownRemark } }) => {
+              return allMarkdownRemark.nodes.map((node) => {
+                return Object.assign({}, node.frontmatter, {
+                  description: node.excerpt,
+                  date: node.frontmatter.date,
+                  url: site.siteMetadata.siteUrl + node.fields.slug,
+                  guid: site.siteMetadata.siteUrl + node.fields.slug,
+                  custom_elements: [{ "content:encoded": node.html }],
+                })
+              })
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                ) {
+                  nodes {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                    }
+                  }
+                }
+              }
+            `,
+            output: "/rss.xml",
+            title: "Chidiebere Onyegbuchulem Personal Website Blog RSS Feed",
           },
         ],
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
-      },
-    },
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Chidexebere Portfolio Website`,
+        name: `Chidiebere Onyegbuchulem Personal Website`,
         short_name: `Chidexebere`,
         start_url: `/`,
         background_color: `#f3f3f3`,
         theme_color: `#000000`,
         display: `standalone`,
-        // edit below
-        icon: `content/assets/profile-pic.jpg`,
+        icon: `src/images/profile-pic.jpg`,
       },
     },
-    {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: `src/utils/typography`,
-      },
-    },
+    `gatsby-plugin-react-helmet`,
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // `gatsby-plugin-offline`,
   ],
 }
