@@ -7,7 +7,7 @@ description: "PWA Summit 2021 : What's new with PWAs"
 
 I first heard about Progressive Web Apps (PWA) in 2016 at the PWA Sub-Saharan Africa Roadshow in Lagos Nigeria. At the end of the conference, I remember chatting with some of the attendees about the features and future of PWAs as we snacked over "small chops".
 
-The <u>PWA Summit 2021</u> was held on the 6th and 7th of October. This was held online with a workshop held on the 6th and the conference proper on the 7th. I will be highlighting what I thought were the most interesting features new to PWAs.
+The <u>PWA Summit 2021</u> was held on the 6th and 7th of October. This was held online with a workshop held on the 6th and the conference proper on the 7th. I will be highlighting what I thought were the most interesting features and web APIs new to PWAs.
 
 <p>&nbsp;</p>
 
@@ -31,7 +31,7 @@ To enable the new richer install on your site you need to add at least one scree
       "type": "image/png"
     },
     {
-      "src": "images/screenshot1.png",
+      "src": "images/screenshot2.png",
       "sizes": "320x640",
       "type": "image/png"
     }
@@ -50,7 +50,7 @@ _A Richer Install UI of the [squoosh.app](https://squoosh.app/) on chrome is see
 
 App shortcuts that have been in native apps are now supported in web platforms. They give access to actions that users need frequently to improve productivity.
 
-App shortcuts help users quickly start common or recommended tasks within your PWA. Easy access to those tasks from anywhere the app icon is displayed will enhance users' productivity as well as increase their engagement with the PWA. In [Possible With Accessibility](https://www.youtube.com/watch?v=RUfX8LNE54U), Léonie also mentioned that shortcuts help those with assistive technologies to go to any point in the PWA with a voice command.
+App shortcuts help users quickly start common or recommended tasks within your PWA. Easy access to those tasks from anywhere the app icon is displayed will enhance users' productivity as well as increase their engagement with the PWA. In her [Possible With Accessibility](https://www.youtube.com/watch?v=RUfX8LNE54U) talk, Léonie also mentioned that shortcuts help those with assistive technologies to go to any point in the PWA with a voice command.
 
 The app shortcuts menu is invoked by right-clicking the app icon in the taskbar (Windows) or dock (macOS) on the user's desktop or long-pressing the app's launcher icon on Android. Below are screenshots showing the shortcuts menu opened on Android and Windows.
 
@@ -87,7 +87,8 @@ _App shortcuts are optionally defined in the web app manifest in the `shortcuts`
 
 With the <u>Web Share Target API</u>, installed web apps can register with the underlying operating system as a share target to receive shared content.
 
-To register your PWA as a share target, add a `share_target` entry to its web app manifest. This tells the operating system to include your app as an option in the intent chooser. The screenshot below shows a PWA added as an option to the intent chooser. The link to the article from <u>bookshop.org</u> can be shared in the encircled PWA.
+To register your PWA as a share target, add a `share_target` entry to its web app manifest. This tells the operating system to include your app as an option in the intent chooser. The screenshot below shows a PWA added as an option to the intent chooser.
+_The link to the article from <u>bookshop.org</u> can be shared with the encircled PWA._
 
 ![Image showing target picker](./Screenshot-share-target.jpg)
 
@@ -300,9 +301,11 @@ self.addEventListener("periodicsync", (event) => {
 
 The <u>Push API</u> allows servers to send messages to service workers, which can run JavaScript code even when no foreground page is running. For example, a server push could update the badge by calling `navigator.setAppBadge()`.
 
-The <u>Push and Notification API</u> are different, but complementary: `push` is invoked when a server supplies information to a service worker; a `notification` is the action of a service worker or web page script showing information to a user.
+The <u>Notifications API</u> allows web apps (PWAs) to control the display of system notifications to the end user, with their permission, even if the web app is not open in the browser.
 
-In addition, users must grant your web app notification permission in order to receive push messages like so:
+> The Push and Notification API are different, but complementary: `push` is invoked when a server supplies information to a service worker; a `notification` is the action of a service worker or web page script showing information to a user.
+
+Therefore, users must grant your web app notification permission in order to receive push messages like so:
 
 ```js
 Notification.requestPermission()
