@@ -41,7 +41,7 @@ const AboutPage = ({ data, location }) => {
                   role="img"
                   aria-label="smile emoji"
                 >
-                  😄
+                  😊
                 </span>
                 .
               </p>
@@ -87,19 +87,19 @@ const AboutPage = ({ data, location }) => {
             </div>
           </section>
           <section className="aboutPage__skills">
-            <h1>Skills I have gained and still improving</h1>
+            <h2>Skills I have gained and still improving</h2>
             <Skills />
           </section>
           <section className="aboutPage__experience">
-            <h1>Where I have worked</h1>
+            <h2>Where I have worked</h2>
             <Experiences />
           </section>
           <section className="aboutPage__projects">
-            <h1>Projects I worked on </h1>
+            <h2>Some projects I worked on </h2>
             <Projects />
           </section>
           <section className="aboutPage__resume">
-            <h2>
+            <h3>
               Want all these on a single PDF? ...
               <a
                 href="https://docs.google.com/document/d/170V3dkL8ip_4PdEmJzdyyZmtTXFUgxvy2eLRjex9kqk/export?format=pdf"
@@ -108,7 +108,7 @@ const AboutPage = ({ data, location }) => {
               >
                 Download Resume
               </a>
-            </h2>
+            </h3>
           </section>
         </div>
       </Layout>

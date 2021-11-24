@@ -13,7 +13,7 @@
   display: flex;
   flex-direction: column;
   background-color: var(--color-greyscale-mid);
-  border-bottom: 5px solid var(--color-white);
+  border-bottom: 5px solid var(--color-tertiary-light);
 
   @include tablet {
     height: 6rem;
@@ -35,7 +35,7 @@
     margin-top: 1rem;
 
     &:hover {
-      color: var(--color-black);
+      color: var(--color-grey);
     }
   }
 
@@ -86,7 +86,7 @@
 
 .blog {
   margin: 0 auto;
-  max-width: 70rem;
+  max-width: 75rem;
   padding: 0 3rem 5rem;
 }
 

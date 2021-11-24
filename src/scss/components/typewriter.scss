@@ -24,6 +24,7 @@
   font-size: var(--font-size-l);
   position: relative;
   color: var(--color-black);
+  background-color: var(--color-focus);
 
   &:after {
     content: "|";

@@ -31,8 +31,12 @@ const IndexPage = ({ data, location }) => {
           <div className="homePage__intro">
             <h1>
               Hello, I'm Chidi
-              <span role="img" aria-label="wave emoji">
-                👋
+              <span
+                className="homePage__emoji"
+                role="img"
+                aria-label="wave emoji"
+              >
+                👋🏽
               </span>
             </h1>
             <div className="homePage__introText">

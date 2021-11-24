@@ -1,7 +1,10 @@
 .homePage {
   &__intro span {
-    font-size: 3rem;
+    font-size: 4rem;
     margin-left: 1rem;
+    @include tablet {
+      font-size: 6rem;
+    }
   }
 
   &__content {
@@ -11,6 +14,9 @@
 
   &__intro h1 {
     font-size: 4rem;
+    @include tablet {
+      font-size: 6rem;
+    }
   }
 
   &__introText p {

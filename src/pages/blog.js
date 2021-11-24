@@ -4,7 +4,6 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../container/layout"
 import Seo from "../components/seo"
-import Button from "../elements/button"
 
 const Blog = ({ data, location }) => {
   const siteTitle =
@@ -31,12 +30,12 @@ const Blog = ({ data, location }) => {
       <Seo title="All posts" />
       <Bio />
       <ol style={{ listStyle: `none` }}>
-        {posts.map(post => {
+        {posts.map((post) => {
           const title = post.frontmatter.title || post.fields.slug
           return (
             <li key={post.fields.slug}>
               <article
-                className="post-list-item"
+                className="blog__list-item"
                 itemScope
                 itemType="http://schema.org/Article"
               >
@@ -62,9 +61,6 @@ const Blog = ({ data, location }) => {
           )
         })}
       </ol>
-      <Link to="/">
-        <Button>Go Home</Button>
-      </Link>
     </Layout>
   )
 }
