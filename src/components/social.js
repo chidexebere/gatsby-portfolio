@@ -1,11 +1,8 @@
 import React from "react"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-  faLinkedin,
-  faTwitter,
-  faGithub,
-} from "@fortawesome/free-brands-svg-icons"
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
+import Linkedin from "../images/icons/linkedin.svg"
+import Twitter from "../images/icons/twitter.svg"
+import Github from "../images/icons/github.svg"
+import Mail from "../images/icons/mail.svg"
 
 const Social = () => {
   return (
@@ -18,10 +15,7 @@ const Social = () => {
             rel="noreferrer"
             title="Linkedin Profile"
           >
-            <FontAwesomeIcon
-              className="icon social__linkedin"
-              icon={faLinkedin}
-            />
+            <Linkedin />
           </a>
         </div>
         <div className="social__icon">
@@ -31,10 +25,7 @@ const Social = () => {
             rel="noreferrer"
             title="Follow me on Twitter"
           >
-            <FontAwesomeIcon
-              icon={faTwitter}
-              className="icon social__twitter"
-            />
+            <Twitter />
           </a>
         </div>
         <div className="social__icon">
@@ -44,7 +35,7 @@ const Social = () => {
             rel="noreferrer"
             title="Github Projects"
           >
-            <FontAwesomeIcon icon={faGithub} className="icon social__github" />
+            <Github />
           </a>
         </div>
         <div className="social__icon">
@@ -54,7 +45,7 @@ const Social = () => {
             rel="noreferrer"
             title="Email me -conyegbuchulem@gmail.com"
           >
-            <FontAwesomeIcon icon={faEnvelope} className="icon social__email" />
+            <Mail />
           </a>
         </div>
       </div>

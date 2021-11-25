@@ -1,12 +1,11 @@
 import React from "react"
 import { Link } from "gatsby"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons"
 import Layout from "../container/layout"
 import Seo from "../components/seo"
 import Button from "../elements/button"
-import "../scss/styles.scss"
 import TypeWriter from "../components/typewriter"
+import ArrowRight from "../images/icons/arrow-right.svg"
+import "../scss/styles.scss"
 
 const IndexPage = ({ data, location }) => {
   const siteTitle =
@@ -47,10 +46,7 @@ const IndexPage = ({ data, location }) => {
             <Link to="/about">
               <Button variant="shadow">
                 More
-                <FontAwesomeIcon
-                  className="social__arrowRight"
-                  icon={faArrowRight}
-                />
+                <ArrowRight />
               </Button>
             </Link>
           </div>
