@@ -1,0 +1,84 @@
+.projects {
+  &__others {
+    margin-top: 3rem;
+    @include tablet {
+      margin-top: 4rem;
+    }
+  }
+}
+
+.projectFeatured {
+  @include tablet {
+    display: grid;
+    grid-template-columns: minmax(150px, 25%) 1fr;
+  }
+
+  &__description {
+    @include tablet {
+      padding: 0 2rem;
+    }
+  }
+  &__image-cover {
+    display: grid;
+    place-items: center;
+    background: var(--color-primary-light);
+    width: 100%;
+    height: 10rem;
+    padding: 2rem;
+    border-radius: 0.4rem;
+  }
+}
+
+.projectList {
+  background-color: var(--color-grey);
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  border-radius: 0.3rem;
+  padding: 1rem 2rem;
+
+  @include tablet {
+    padding: 1rem 4rem;
+  }
+
+  &__name {
+    font-weight: 600;
+  }
+
+  &__technologyUsed {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 3rem;
+  }
+
+  &__technologyUsedList {
+    font-weight: normal;
+    margin: 0 0.5rem;
+  }
+}
+
+.project {
+  &__hero {
+    display: grid;
+    place-items: center;
+    background: var(--color-primary-light);
+    margin-bottom: 5rem;
+    width: 100%;
+    height: 10rem;
+  }
+  &__status {
+    font-size: 1.25rem;
+    color: var(--color-tertiary-light);
+  }
+  &__headline {
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__link {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+  }
+}
