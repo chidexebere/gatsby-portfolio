@@ -1,43 +1,5 @@
 [
   {
-    "type": "Personal",
-    "projects": [
-      {
-        "name": "Learn Everyday",
-        "description": "A quiz web app that helps students prepare for A-level examinations.",
-        "technologyUsed": ["TypeScript", "React", "Netlify"],
-        "url": "https://learn-everyday.netlify.app/"
-      },
-      {
-        "name": "Search GitHub Profiles",
-        "description": "A GitHub profile page clone. You search for a GitHub profile using a GitHub account username.",
-        "technologyUsed": ["JavaScript", "GraphQL GitHub API", "Netlify"],
-        "url": "https://chidexebere-search-github-profiles.netlify.app/"
-      },
-      {
-        "name": "Restaurant Review",
-        "description": "A progressive web app that allows users to search for a restaurant, display its location on a map and make reviews.",
-        "technologyUsed": [
-          "JavaScript",
-          "NodeJS",
-          "Progressive Enhancement",
-          "Gulp",
-          "Mapbox API",
-          "Restdb",
-          "Firebase"
-        ],
-        "url": "https://restaurant-reviews-2.web.app/"
-      },
-      {
-        "name": "Airbnb Clone",
-        "description": "A web app that allows users to search for an apartment and display its location on google maps using markers",
-        "technologyUsed": ["JavaScript", "Google Maps API", "Firebase"],
-        "url": "https://airbnb-clone-5.web.app/"
-      }
-    ]
-  },
-
-  {
     "type": "Open Source",
     "projects": [
       {
@@ -55,6 +17,55 @@
           "Storybook"
         ],
         "url": "https://github.com/creativecommons/vocabulary"
+      },
+      {
+        "name": "Posthog.com",
+        "description": "Official docs, website, and handbook for PostHog",
+        "technologyUsed": ["SCSS", "JavaScript", "TypeScript", "Gatsby"],
+        "url": "https://github.com/PostHog/posthog.com"
+      }
+    ]
+  },
+  {
+    "type": "Others",
+    "projects": [
+      {
+        "name": "Search GitHub Profiles",
+        "description": "A GitHub profile page clone. You search for a GitHub profile using a GitHub account username.",
+        "technologyUsed": ["JavaScript", "GraphQL GitHub API", "Netlify"],
+        "url": "https://chidexebere-search-github-profiles.netlify.app/"
+      },
+      {
+        "name": "Todo List",
+        "description": "A simple todo list app built with React.",
+        "technologyUsed": ["JavaScript", " React", "Netlify"],
+        "url": "https://chidi-todo-app.netlify.app/"
+      },
+      {
+        "name": "Restaurant Review",
+        "description": "A progressive web app that allows users to search for a restaurant, display its location on a map and make reviews.",
+        "technologyUsed": [
+          "JavaScript",
+          "NodeJS",
+          "Progressive Enhancement",
+          "Gulp",
+          "Mapbox API",
+          "Restdb",
+          "Firebase"
+        ],
+        "url": "https://restaurant-reviews-2.web.app/"
+      },
+      {
+        "name": "Currency Converter",
+        "description": "A web app that that converts from one currency to another.",
+        "technologyUsed": [
+          "JavaScript",
+          "Service Worker",
+          "IndexedDB",
+          "Free Currency Converter API",
+          "Firebase"
+        ],
+        "url": "https://chidex-currency-converter.firebaseapp.com/"
       }
     ]
   }
