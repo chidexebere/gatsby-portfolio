@@ -89,6 +89,10 @@
   margin: 0 auto;
   max-width: 75rem;
   padding: 0 3rem 5rem;
+  margin-top: 2rem;
+  @include tablet {
+    margin-top: 0;
+  }
 }
 
 .footer {

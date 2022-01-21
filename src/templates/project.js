@@ -20,10 +20,10 @@ const ProjectTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <section className="project__hero">
-          {/* <GatsbyImage
+          <GatsbyImage
             image={getImage(project.frontmatter.featuredImage)}
             alt={`${project.frontmatter.title} hero image`}
-          /> */}
+          />
         </section>
         <header>
           <h1 itemProp="headline">{project.frontmatter.title}</h1>
