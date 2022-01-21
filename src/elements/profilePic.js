@@ -17,9 +17,9 @@ const ProfilePic = () => {
   const author = data.site.siteMetadata?.author
 
   return (
-    <div class="circle outer-circle">
-      <span class="splash direction-1"></span>
-      <span class="circle inner-circle">
+    <div className="circle outer-circle">
+      <span className="splash direction-1"></span>
+      <span className="circle inner-circle">
         <StaticImage
           className="profile__pic"
           layout="fixed"
@@ -31,7 +31,7 @@ const ProfilePic = () => {
           alt={author.name}
         />
       </span>
-      <span class="splash direction-2"></span>
+      <span className="splash direction-2"></span>
     </div>
   )
 }

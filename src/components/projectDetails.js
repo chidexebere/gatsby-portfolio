@@ -1,11 +1,11 @@
 import React from "react"
 
-const ProjectDetails = props => {
+const ProjectDetails = (props) => {
   const { id, selectedId, open, projects } = props
 
   const addedClass = selectedId === id && open === true ? `open` : `close`
 
-  const computedClass = `experienceList ${addedClass}`
+  const computedClass = `projectList ${addedClass}`
 
   return (
     <div className={computedClass}>

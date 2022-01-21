@@ -5,14 +5,16 @@ import Social from "../components/social"
 const Layout = ({ location, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const aboutPath = `${__PATH_PREFIX__}/about`
-  const aboutPathSlash = `${__PATH_PREFIX__}/about/`
+  const projectsPath = `${__PATH_PREFIX__}/projects`
+  const blogPath = `${__PATH_PREFIX__}/blog`
   let main
 
   if (location.pathname === rootPath) {
     main = <main className="main home">{children}</main>
   } else if (
     location.pathname === aboutPath ||
-    location.pathname === aboutPathSlash
+    location.pathname === projectsPath ||
+    location.pathname === blogPath
   ) {
     main = <main className="main">{children}</main>
   } else {
@@ -27,6 +29,7 @@ const Layout = ({ location, children }) => {
         <nav className="header__nav">
           <Link to="/">Home</Link>
           <Link to="/about">About</Link>
+          <Link to="/projects">Projects</Link>
           <Link to="/blog">Blog</Link>
         </nav>
       </header>
