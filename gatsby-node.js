@@ -5,19 +5,38 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   // Define a template for blog post
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const BlogPostTemplate = path.resolve(`./src/templates/blog-post.js`)
+
+  // Define a template for projects
+  const ProjectTemplate = path.resolve(`./src/templates/project.js`)
 
   // Get all markdown blog posts sorted by date
   const result = await graphql(
     `
       {
-        allMarkdownRemark(
+        allBlogPost: allMarkdownRemark(
+          filter: { fields: { slug: { regex: "/(blog)/" } } }
           sort: { fields: [frontmatter___date], order: ASC }
           limit: 1000
         ) {
           nodes {
             id
             fields {
+              slug
+            }
+          }
+        }
+
+        allProjects: allMarkdownRemark(
+          filter: { fields: { slug: { regex: "/(projects)/" } } }
+          sort: { fields: [frontmatter___date], order: ASC }
+          limit: 1000
+        ) {
+          nodes {
+            fields {
+              slug
+            }
+            frontmatter {
               slug
             }
           }
@@ -34,7 +53,8 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     return
   }
 
-  const posts = result.data.allMarkdownRemark.nodes
+  const posts = result.data.allBlogPost.nodes
+  const projects = result.data.allProjects.nodes
 
   // Create blog posts pages
   // But only if there's at least one markdown file found at "content/blog" (defined in gatsby-config.js)
@@ -47,7 +67,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
       createPage({
         path: post.fields.slug,
-        component: blogPost,
+        component: BlogPostTemplate,
         context: {
           id: post.id,
           previousPostId,
@@ -56,6 +76,16 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  projects.forEach((project, index) => {
+    createPage({
+      path: project.fields.slug,
+      component: ProjectTemplate,
+      context: {
+        slug: project.frontmatter.slug,
+      },
+    })
+  })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
