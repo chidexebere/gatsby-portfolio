@@ -1,4 +1,5 @@
 ---
+path: welcome
 title: Welcome!
 date: "2019-01-01"
 description: "Welcome to my blog"
