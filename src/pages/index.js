@@ -20,12 +20,12 @@ const IndexPage = ({ data, location }) => {
   ]
 
   return (
-    <div className="homePage">
-      <Layout location={location} title={siteTitle}>
-        <Seo
-          title="Home"
-          keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
-        />
+    <Layout location={location} title={siteTitle}>
+      <Seo
+        title="Home"
+        keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <div className="homePage">
         <div className="homePage__content">
           <div className="homePage__intro">
             <h1>
@@ -51,8 +51,8 @@ const IndexPage = ({ data, location }) => {
             </Link>
           </div>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   )
 }
 

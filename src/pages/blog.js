@@ -57,6 +57,7 @@ const Blog = ({ data, location }) => {
                   />
                 </section>
               </article>
+              <hr />
             </li>
           )
         })}
@@ -74,7 +75,10 @@ export const pageQuery = graphql`
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      filter: { fields: { slug: { regex: "/(blog)/" } } }
+      sort: { fields: [frontmatter___date], order: DESC }
+    ) {
       nodes {
         excerpt
         fields {

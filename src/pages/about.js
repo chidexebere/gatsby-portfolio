@@ -5,7 +5,6 @@ import Seo from "../components/seo"
 import ProfilePic from "../elements/profilePic"
 import Skills from "../components/skills"
 import Experiences from "../components/experiences"
-import Projects from "../components/projects"
 
 const AboutPage = ({ data, location }) => {
   const siteTitle =
@@ -13,12 +12,12 @@ const AboutPage = ({ data, location }) => {
     "Chidiebere Onyegbuchulem Personal Website"
 
   return (
-    <div className="aboutPage">
-      <Layout location={location} title={siteTitle}>
-        <Seo
-          title="About me"
-          keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
-        />
+    <Layout location={location} title={siteTitle}>
+      <Seo
+        title="About me"
+        keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
+      />
+      <div className="aboutPage">
         <div className="aboutPage__content">
           <h1>About Me</h1>
           <section className="aboutPage__intro">
@@ -94,10 +93,6 @@ const AboutPage = ({ data, location }) => {
             <h2>Where I have worked</h2>
             <Experiences />
           </section>
-          <section className="aboutPage__projects">
-            <h2>Some projects I worked on </h2>
-            <Projects />
-          </section>
           <section className="aboutPage__resume">
             <h3>
               Want all these on a single PDF? ...
@@ -111,8 +106,8 @@ const AboutPage = ({ data, location }) => {
             </h3>
           </section>
         </div>
-      </Layout>
-    </div>
+      </div>
+    </Layout>
   )
 }
 
