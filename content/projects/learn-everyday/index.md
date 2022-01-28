@@ -14,7 +14,7 @@ When COVID-19 struck, students in my home country Nigeria were preparing to take
 
 ## Purpose and Goal
 
-My goal is to build to fun educational quiz app to help these students practice for their examinations and <b>for free</b>.
+My goal is to build to fun educational quiz app to help these students practice for their examinations and **for free**.
 Also, I wanted it to be accessible to students with slow internet service.
 
 ## Design
@@ -25,11 +25,11 @@ I gathered ideas from my favorite quiz apps: Quizizz, Kahoot, and Elevate. And d
 
 ## Development
 
-<u>Frontend</u>: The frontend is built with React and TypeScript. Initially, most of the code was written in JavaScript but I switched to TypeScript because of its benefits especially with static typing and spotting bugs early. The app is also a progressive web app because I wanted it to be accessible to most students with slow internet service.
+<u>Frontend</u>: The frontend is built with **React** and **TypeScript**. Initially, most of the code was written in JavaScript but I switched to TypeScript because of its benefits especially with static typing and spotting bugs early. The app is also a **progressive web app** because I wanted it to be accessible to most students with slow internet service.
 
 <u>Backend</u>: To access questions of major exams in Nigeria, I used the [ALOC Endpoints API](https://questions.aloc.ng/).
 
-<u>Deployment</u>: Netlify was used.
+<u>Deployment</u>: **Netlify** was used.
 
 [source code](https://github.com/chidexebere/learn-everyday)
 

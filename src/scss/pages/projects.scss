@@ -8,6 +8,7 @@
 }
 
 .projectFeatured {
+  margin: 2rem 0;
   @include tablet {
     display: grid;
     grid-template-columns: minmax(150px, 25%) 1fr;
