@@ -8,7 +8,7 @@
     "url": "https://github.com/chidexebere/gatsby-portfolio/issues"
   },
   "dependencies": {
-    "gatsby": "^4.2.0",
+    "gatsby": "^4.24.7",
     "gatsby-plugin-feed": "^4.2.0",
     "gatsby-plugin-google-analytics": "^4.2.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
