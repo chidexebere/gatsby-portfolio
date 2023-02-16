@@ -10,10 +10,14 @@ const FeaturedProjects = ({ projects }) => {
           <div key={index} className="projectFeatured">
             <Link to={project.fields.slug} itemProp="url">
               <div className="projectFeatured__image-cover">
-                <GatsbyImage
-                  image={getImage(project.frontmatter.thumb)}
-                  alt={`${project.frontmatter.title} logo`}
-                />
+                {project.frontmatter.thumb ? (
+                  <GatsbyImage
+                    image={getImage(project.frontmatter.thumb)}
+                    alt={`${project.frontmatter.title} logo`}
+                  />
+                ) : (
+                  <span>{project.frontmatter.title}</span>
+                )}
               </div>
             </Link>
             <div className="projectFeatured__description">
