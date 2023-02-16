@@ -20,4 +20,37 @@ Working with the client, we came up with this first design which I designed usin
 ![Jessential homepage design](./figma-design-desktop.png)
 [More on Figma](https://www.figma.com/file/byy28WQ17cymDsF8AYRlpZ/Jessentials)
 
-## Development (In progress)
+## Development
+
+<u>Frontend:</u> **NextJS and TypeScript**: used to build the UI components, **Tailwind** for general styles, **React Query**: for managing server state and **React Context** for local state, **Eslint** for linting and **Prettier** for code formating.
+
+<u>Backend:</u> **Sanity** to manage the ecommerce products and content experiences; **Stripe** to manage checkout and payment
+
+<u>Deployment:</u> **Vercel**
+
+[source code](https://jessentials.vercel.app/)
+
+## Screenshots
+
+1. Home page with all products in different categories.
+   ![home page with all products](./home-page.png)
+
+2. A category page showing products in same category.
+   ![a category page](./category-page.png)
+
+3. A product page showing selected item.
+   ![a product page showing selected item](./product-page.png)
+
+4. A product page showing selected item with cart opened on the side.
+   ![a product page showing selected item with cart opened](./product-page-with-cart.png)
+
+5. A stripe checkout page for selected item
+   ![a stripe checkout page for selected item](./stripe-checkout-page.png)
+
+## Takeaways
+
+I have learned more about NextJS, Sanity and Stripe from working on this project. This project is still a work in progress and I have resolved to improve the following:
+
+- write test (unit, integration and end-end tests).
+
+- improve the UI , UX and accessibility.
