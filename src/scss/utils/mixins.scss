@@ -11,3 +11,17 @@ $desktop: 1024px;
     @content;
   }
 }
+
+$desktop-xl: 1280px;
+@mixin desktop-xl {
+  @media (min-width: #{$desktop-xl}) {
+    @content;
+  }
+}
+
+$desktop-2xl: 1536px;
+@mixin desktop-2xl {
+  @media (min-width: #{$desktop-2xl}) {
+    @content;
+  }
+}
