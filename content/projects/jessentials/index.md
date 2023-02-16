@@ -6,6 +6,7 @@ description: "An eCommerce website"
 status: "January 2022 - Ongoing"
 slug: jessentials
 thumb: "JESSENTIALS.png"
+url: "https://jessentials.vercel.app/"
 ---
 
 My client; JEssential is a third-party seller on large marketplaces but wishes to have her eCommerce website to increase profit margins and conversions. Having her website will help her diversify her online presence, drive additional sales, improve branding, lower cost per sale, and remove limitations, restrictions, and tough requirements from the large eCommerce marketplaces.
