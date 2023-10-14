@@ -29,7 +29,7 @@ Working with the client, we came up with this first design which I designed usin
 
 <u>Deployment:</u> **Vercel**
 
-[source code](https://jessentials.vercel.app/)
+[source code](https://github.com/chidexebere/jessentials)
 
 ## Screenshots
 

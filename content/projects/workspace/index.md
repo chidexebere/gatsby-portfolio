@@ -25,7 +25,7 @@ A simple Kanban board implementation used to plan personal and work projects.
 
 <u>Deployment:</u> **Firebase Hosting**
 
-[source code](https://github.com/chidexebere/learn-everyday)
+[source code](https://github.com/chidexebere/workspace)
 
 ## Screenshots
 
