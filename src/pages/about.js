@@ -15,7 +15,15 @@ const AboutPage = ({ data, location }) => {
     <Layout location={location} title={siteTitle}>
       <Seo
         title="About me"
-        keywords={[`portfolio`, `blog`, `gatsby`, `javascript`, `react`]}
+        keywords={[
+          `portfolio`,
+          `blog`,
+          `gatsby`,
+          `javascript`,
+          `typescript`,
+          `react`,
+          `nextjs`,
+        ]}
       />
       <div className="aboutPage">
         <div className="aboutPage__content">
@@ -23,7 +31,7 @@ const AboutPage = ({ data, location }) => {
           <section className="aboutPage__intro">
             <div className="aboutPage__introText">
               <p>
-                I am a Frontend developer living in <u>Lagos </u>
+                I am a Software Engineer living in <u>Lagos </u>
                 <u>Nigeria</u>. And I have been doing this for about 2 years.
               </p>
               <p>
