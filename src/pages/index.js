@@ -11,7 +11,10 @@ const IndexPage = ({ data, location }) => {
   const siteTitle =
     data?.site.siteMetadata?.title ||
     "Chidiebere Onyegbuchulem Personal Website"
-  const staticText = [`A Software Engineer`, "I care about"]
+  const staticText = [
+    `A Software Engineer building great product experiences.`,
+    "I care about",
+  ]
   const words = [
     "user experience",
     "accessibility",
