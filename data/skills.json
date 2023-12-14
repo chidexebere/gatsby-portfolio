@@ -1,26 +1,31 @@
 [
   {
-    "title": "Web Technologies",
+    "title": "Technologies",
     "list": [
       "HTML & CSS/SCSS",
       "JavaScript",
       "TypeScript",
-      "React/Redux",
-      "NodeJS",
+      "React",
+      "React Native",
+      "Next.js",
+      "Gatsby",
+      "Vite",
+      "Express",
+      "Node.js",
       "Bulma",
       "Tailwind"
     ]
   },
   {
-    "title": "Tools/Technologies",
+    "title": "Libraries/Tools",
     "list": [
       "Git/GitHub",
+      "Redux",
       "REST/GraphQL",
       "Gulp/Webpack",
-      "Jest/React Testing Library",
+      "Jest/React Testing Library/Cypress",
       "Storybook",
-      "Firebase/Netlify",
-      "Gatsby",
+      "MongoDB/Firebase/Netlify/Vercel",
       "Figma"
     ]
   }

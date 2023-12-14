@@ -32,16 +32,15 @@ const AboutPage = ({ data, location }) => {
             <div className="aboutPage__introText">
               <p>
                 I am a Software Engineer living in <u>Lagos </u>
-                <u>Nigeria</u>. And I have been doing this for about 2 years.
+                <u>Nigeria</u>.
               </p>
               <p>
                 I love solving problems and I am passionate about building great
                 experiences on the web.
               </p>
               <p>
-                I constantly learn and improve myself. I am currently{" "}
-                <u>learning UX</u> and <u>product design</u>. I want to be that
-                Frontend engineer that understand users need and is also great
+                I constantly learn and improve myself. I want to be that
+                Software engineer that understand users need and is also great
                 at implementing it
                 <span
                   className="aboutPage__emoji"
