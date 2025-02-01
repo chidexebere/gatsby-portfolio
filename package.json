@@ -2,47 +2,27 @@
   "name": "chidiebere-onyegbuchulem-personal-website",
   "private": true,
   "description": "Chidiebere Onyegbuchulem personal portfolio website and blog",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Chidiebere Onyegbuchulem",
   "bugs": {
     "url": "https://github.com/chidexebere/gatsby-portfolio/issues"
   },
   "dependencies": {
-    "gatsby": "^4.2.0",
-    "gatsby-plugin-feed": "^4.2.0",
-    "gatsby-plugin-google-analytics": "^4.2.0",
-    "gatsby-plugin-google-fonts": "^1.0.1",
-    "gatsby-plugin-image": "^2.2.0",
-    "gatsby-plugin-manifest": "^4.2.0",
-    "gatsby-plugin-netlify-cms": "^6.2.0",
-    "gatsby-plugin-offline": "^5.2.0",
-    "gatsby-plugin-react-helmet": "^5.2.0",
-    "gatsby-plugin-react-svg": "^3.1.0",
-    "gatsby-plugin-sass": "^5.2.0",
-    "gatsby-plugin-sharp": "^4.2.0",
-    "gatsby-remark-copy-linked-files": "^5.2.0",
-    "gatsby-remark-images": "^6.2.0",
-    "gatsby-remark-prismjs": "^6.2.0",
-    "gatsby-remark-responsive-iframe": "^5.2.0",
-    "gatsby-remark-smartypants": "^5.2.0",
-    "gatsby-source-filesystem": "^4.2.0",
-    "gatsby-transformer-json": "^4.2.0",
-    "gatsby-transformer-remark": "^5.2.0",
-    "gatsby-transformer-sharp": "^4.2.0",
     "netlify-cms-app": "^2.9.1",
-    "node-sass": "^7.0.3",
+    "next": "^15.1.6",
     "prismjs": "^1.25.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "prettier": "^2.4.1"
+    "@types/node": "^22.13.0",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "prettier": "^2.4.1",
+    "typescript": "^5.7.3"
   },
   "homepage": "https://github.com/chidexebere/gatsby-portfolio#readme",
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
@@ -50,12 +30,8 @@
     "url": "https://github.com/chidexebere/gatsby-portfolio"
   },
   "scripts": {
-    "build": "gatsby build",
-    "develop": "gatsby develop",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
-    "start": "gatsby clean && gatsby develop",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   }
 }
