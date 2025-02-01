@@ -1,37 +1,27 @@
 {
-  "name": "chidiebere-onyegbuchulem-personal-website",
+  "name": "gatsby-portfolio",
+  "version": "0.1.0",
   "private": true,
-  "description": "Chidiebere Onyegbuchulem personal portfolio website and blog",
-  "version": "2.0.0",
-  "author": "Chidiebere Onyegbuchulem",
-  "bugs": {
-    "url": "https://github.com/chidexebere/gatsby-portfolio/issues"
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "netlify-cms-app": "^2.9.1",
-    "next": "^15.1.6",
-    "prismjs": "^1.25.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-helmet": "^5.2.0"
+    "next": "15.1.6"
   },
   "devDependencies": {
-    "@types/node": "^22.13.0",
-    "@types/react": "^19.0.8",
-    "@types/react-dom": "^19.0.3",
-    "prettier": "^2.4.1",
-    "typescript": "^5.7.3"
-  },
-  "homepage": "https://github.com/chidexebere/gatsby-portfolio#readme",
-  "license": "MIT",
-  "main": "n/a",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/chidexebere/gatsby-portfolio"
-  },
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start"
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "eslint": "^9",
+    "eslint-config-next": "15.1.6",
+    "@eslint/eslintrc": "^3"
   }
 }
