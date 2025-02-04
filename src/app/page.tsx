@@ -5,7 +5,7 @@ import RecentProjects from '@/components/recent-projects'
 
 export default function Home() {
   return (
-    <section className='py-24'>
+    <section className=''>
       <div className='container max-w-3xl'>
         <Intro />
         <RecentPosts />
