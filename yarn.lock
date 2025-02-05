@@ -321,6 +321,11 @@
   dependencies:
     "@types/mdx" "^2.0.0"
 
+"@netlify/plugin-nextjs@^5.9.4":
+  version "5.9.4"
+  resolved "https://registry.yarnpkg.com/@netlify/plugin-nextjs/-/plugin-nextjs-5.9.4.tgz#ed6a6846eb1ee60927ae4c07ecc6a1c9832007a5"
+  integrity sha512-Q9qyhGUxFuM3kuWmoaj4yHPUfHhOsZmwdsQv4kIXkBWVu8FOe0RFHRP0A0EXciSVFGwq+XAo3H5jEtVSANAOWw==
+
 "@next/env@15.1.6":
   version "15.1.6"
   resolved "https://registry.yarnpkg.com/@next/env/-/env-15.1.6.tgz#2fa863d8c568a56b1c8328a86e621b8bdd4f2a20"
