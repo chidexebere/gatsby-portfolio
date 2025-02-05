@@ -4,9 +4,9 @@ import Image from 'next/image'
 import { formatDate } from '@/lib/utils'
 import MDXContent from '@/components/mdx-content'
 import { getPosts, getPostBySlug } from '@/lib/posts'
-import { ArrowLeftIcon } from '@radix-ui/react-icons'
+import { FaArrowLeft } from 'react-icons/fa'
 import { notFound } from 'next/navigation'
-// import NewsletterForm from '@/components/newsletter-form'
+import NewsletterForm from '@/components/newsletter-form'
 
 export async function generateStaticParams() {
   const posts = await getPosts()
@@ -33,7 +33,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           href='/posts'
           className='mb-8 inline-flex items-center gap-2 text-sm font-light text-muted-foreground transition-colors hover:text-foreground'
         >
-          <ArrowLeftIcon className='h-5 w-5' />
+          <FaArrowLeft className='h-5 w-5' />
           <span>Back to posts</span>
         </Link>
 
@@ -59,7 +59,9 @@ export default async function Post({ params }: { params: { slug: string } }) {
           <MDXContent source={content} />
         </main>
 
-        <footer className='mt-16'>{/* <NewsletterForm /> */}</footer>
+        <footer className='mt-16'>
+          <NewsletterForm />
+        </footer>
       </div>
     </section>
   )
