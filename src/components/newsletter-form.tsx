@@ -41,7 +41,7 @@ export default function NewsletterForm() {
 
   return (
     <section>
-      <Card className='rounded-lg border-0 dark:border'>
+      <Card className='border-t-1 rounded-lg dark:border'>
         <CardContent className='flex flex-col gap-8 pt-6 md:flex-row md:justify-between md:pt-8'>
           <div>
             <h2 className='text-2xl font-bold'>Subscribe to my newsletter</h2>
