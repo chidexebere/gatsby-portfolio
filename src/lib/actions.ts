@@ -19,7 +19,7 @@ export async function sendEmail(data: ContactFormInputs) {
   try {
     const { name, email, message } = result.data
     const { data, error } = await resend.emails.send({
-      from: 'conyegbuchulem@gmail.com',
+      from: 'Acme <onboarding@resend.dev>',
       to: [email],
       cc: ['conyegbuchulem@gmail.com'],
       subject: 'Contact form submission',
