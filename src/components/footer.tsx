@@ -3,7 +3,7 @@ import { JSX, SVGProps } from 'react'
 const navigation = [
   {
     name: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/in/onyegbuchulem-chidiebere/',
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 448 512' {...props}>
         <path
@@ -11,20 +11,20 @@ const navigation = [
           d='M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z'
         ></path>
       </svg>
-    ),
+    )
   },
   {
     name: 'X',
-    href: '#',
+    href: 'https://twitter.com/chidexebere',
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path d='M13.6823 10.6218L20.2391 3H18.6854L12.9921 9.61788L8.44486 3H3.2002L10.0765 13.0074L3.2002 21H4.75404L10.7663 14.0113L15.5685 21H20.8131L13.6819 10.6218H13.6823ZM11.5541 13.0956L10.8574 12.0991L5.31391 4.16971H7.70053L12.1742 10.5689L12.8709 11.5655L18.6861 19.8835H16.2995L11.5541 13.096V13.0956Z' />
       </svg>
-    ),
+    )
   },
   {
     name: 'GitHub',
-    href: '#',
+    href: 'https://github.com/chidexebere',
     icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
       <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
         <path
@@ -33,21 +33,8 @@ const navigation = [
           clipRule='evenodd'
         />
       </svg>
-    ),
-  },
-  {
-    name: 'YouTube',
-    href: '#',
-    icon: (props: JSX.IntrinsicAttributes & SVGProps<SVGSVGElement>) => (
-      <svg fill='currentColor' viewBox='0 0 24 24' {...props}>
-        <path
-          fillRule='evenodd'
-          d='M19.812 5.418c.861.23 1.538.907 1.768 1.768C21.998 8.746 22 12 22 12s0 3.255-.418 4.814a2.504 2.504 0 0 1-1.768 1.768c-1.56.419-7.814.419-7.814.419s-6.255 0-7.814-.419a2.505 2.505 0 0 1-1.768-1.768C2 15.255 2 12 2 12s0-3.255.417-4.814a2.507 2.507 0 0 1 1.768-1.768C5.744 5 11.998 5 11.998 5s6.255 0 7.814.418ZM15.194 12 10 15V9l5.194 3Z'
-          clipRule='evenodd'
-        />
-      </svg>
-    ),
-  },
+    )
+  }
 ]
 
 export default function Footer() {
@@ -71,8 +58,8 @@ export default function Footer() {
           </div>
           <div className='mt-8 md:order-1 md:mt-0'>
             <p className='text-center text-xs leading-5 text-muted-foreground'>
-              &copy; {new Date().getFullYear()} Your Company. All rights
-              reserved.
+              &copy; {new Date().getFullYear()} Chidiebere Onyegbuchulem. All
+              rights reserved.
             </p>
           </div>
         </div>
