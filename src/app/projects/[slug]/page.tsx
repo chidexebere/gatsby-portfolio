@@ -27,10 +27,10 @@ export default async function Project({
   }
 
   const { metadata, content } = project
-  const { title, image, author, publishedAt } = metadata
+  const { title, image, url, publishedAt } = metadata
 
   return (
-    <section className='pb-24 pt-32'>
+    <section className=''>
       <div className='container max-w-3xl'>
         <Link
           href='/projects'
@@ -53,9 +53,12 @@ export default async function Project({
 
         <header>
           <h1 className='title'>{title}</h1>
-          <p className='mt-3 text-xs text-muted-foreground'>
-            {author} / {formatDate(publishedAt ?? '')}
-          </p>
+          <div className='mt-3 flex items-center justify-between text-xs text-muted-foreground'>
+            <p className=''>{formatDate(publishedAt ?? '')}</p>
+            <Link href={url ? url : ''} className='text-green-600'>
+              view app
+            </Link>
+          </div>
         </header>
 
         <main className='prose mt-16 dark:prose-invert'>
