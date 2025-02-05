@@ -1,0 +1,454 @@
+---
+  title: Stop Putting Everything In A UseEffect
+  summary: Stop Putting Everything In A UseEffect Hook
+  image: /images/posts/useEffect-hook.png
+  author: 'Chidiebere Onyegbuchulem'
+  publishedAt: '2023-03-31'
+---
+
+The _useEffect_ hook is one of the most important react hooks but also one of
+the most misused. Part of the confusion comes with its name. A better name would
+have been _useSynchronize_. This is because the mental model of the
+`useEffect()` is for <u>synchronization</u> of some effects not for running all
+effects. Let me explain further.
+
+According to the latest react docs :
+
+> Effects should usually synchronize your components with an external system. If
+> there’s no external system and you only want to adjust some state based on
+> another state, you might not need an Effect.
+
+This means that the `useEffect()` lets you run some code after rendering so that
+you can synchronize your component with some system outside of React. These
+systems outside of React introduce <u>Side-Effects</u>. Side-effects or effects
+for short are other things that happen in your react application that are not
+related to UI rendering. Examples include: sending HTTP requests to the server,
+storing data in browser storage, or running timers or intervals functions.
+
+Some side-effects happen as a result of rendering and some as a result of a user
+event. For example, in a chat application, sending a message in the chat (a POST
+request) is a side-effect caused by an event because it is directly caused by
+the user clicking a specific button. However, setting up a server connection to
+a chat-room is a side-effect caused by rendering because it should happen after
+rendering the chat-room component.
+
+<p>&nbsp;</p>
+
+## You do not need to do the following in a useEffect
+
+### 1. Updating state
+
+You do not need a `useEffect()` if you want to update a component’s state
+corresponding to some props or state change. This is because setting state in a
+`useEffect()` causes unnecessary re-render.
+
+```js
+❌
+
+const Form = () => {
+  const [firstName, setFirstName] = useState("Chidi")
+  const [lastName, setLastName] = useState("Onye")
+
+  // Avoid: redundant state and unnecessary effect
+  const [fullName, setFullName] = useState("")
+  useEffect(() => {
+    setFullName(firstName + " " + lastName)
+  }, [firstName, lastName])
+  // ...
+}
+```
+
+Remove the `useEffect()` and the redundant state variable.
+
+```js
+✅
+
+const Form = () => {
+  const [firstName, setFirstName] = useState('Chidi');
+  const [lastName, setLastName] = useState('Onye');
+
+  // Good: calculated during rendering
+  const fullName = firstName + ' ' + lastName;
+  // ...
+}
+```
+
+### 2. Caching expensive calculations
+
+```js
+❌
+
+const Cart = () => {
+  const [items, setItems] = useState([]);
+
+  // Avoid: 'total' is a redundant state and Effect is unnecessary
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    setTotal(items.reduce((currentTotal, item) => {
+    return currentTotal + item.price;
+    },0);
+  }, [items]);
+
+  // ...
+}
+```
+
+Since `total` is a derived value, remove it from a `useEffect()` and use a
+`useMemo()` if your derived calculations are expensive.
+
+```js
+✅
+
+const Cart = () => {
+  const [items, setItems] = useState([]);
+  const total = items.reduce((currentTotal, item) => {
+    return currentTotal + item.price;
+    },0);
+  // ...
+}
+```
+
+```js
+✅
+
+const Cart = () => {
+  const [items, setItems] = useState([]);
+  const total = useMemo(() => {
+    // Does not re-run unless 'items' changes
+   items.reduce((currentTotal, item) => {
+    return currentTotal + item.price;
+    },0),
+   [items]);
+  // ...
+}
+```
+
+### 3. Subscribing to an external store
+
+If your component needs to subscribe to some external store, the usual practice
+is to implement this in a `useEffect()` but there is a better solution.
+
+```js
+✅
+
+const useConnectionStatus = () => {
+  const [isConnected, setIsConnected] = useState(true);
+
+  useEffect(() => {
+    const sub = storeApi.subcribe(({status}) => {
+    setIsConnected(status === 'connected');
+    });
+    return () => {
+      sub.unsubscribe();
+    };
+  }, []);
+
+  return isConnected;
+}
+```
+
+A preferred solution would be to use `useSyncExternalStore`; a purpose-built
+react hook for subscribing to an external store
+
+```js
+✅ ✅
+
+const useConnectionStatus = () => {
+  return useSyncExternalStore(
+    storeApi.subcribe, // subscribe
+    () => storeApi.getStatus() === 'connected', // get snapshot
+    () => true // get server snapshot
+  );
+}
+```
+
+### 4. Initializing your application
+
+You do not need `useEffect()` to execute effects that run once when your app
+starts.
+
+```js
+❌
+
+const App = () => {
+  // Avoid: Effects with logic that should only ever run once
+  useEffect(() => {
+    authenticateUser();
+  }, []);
+  // ...
+}
+```
+
+Since the effect runs once as your application starts, put it outside your `App`
+component.
+
+```js
+✅
+
+if (typeof window !== 'undefined') { // Check if we're running in the browser.
+  authenticateUser();  // Only runs once per app load
+}
+
+const App = () => {
+  // ...
+}
+```
+
+### 5. Handling Fire Once User Events
+
+User events that fire once on demand should be placed in an event handler and
+not in the useEffect hook.
+
+```js
+❌
+
+const UsersList = ({ users }) => {
+  const [newUser, setNewUser] = useState({
+    firstname: "",
+    surname: ""
+  });
+
+  const handleAddNewUser = (event) => {
+    event.preventDefault();
+    // This updates the users
+    addNewUser(newUser);
+  }
+
+  useEffect(() => {
+    handleAddNewUser()
+  }, [users.count]);
+
+  return (
+    <>
+      <h2> Enter a new user </h2>
+      <form onSubmit>
+      // ...
+      </form>
+      <Users users={users} />
+    </>
+  )
+  // ...
+}
+```
+
+```js
+✅
+
+const UsersList = ({ users }) => {
+  const [newUser, setNewUser] = useState({
+    firstname: "",
+    surname: ""
+  });
+
+  const handleAddNewUser = (event) => {
+    event.preventDefault();
+    addNewUser(newUser);
+  }
+
+  return (
+    <>
+      <h2> Enter a new user </h2>
+      <form onSubmit={handleAddNewUser}>
+      // ...
+      </form>
+      <Users users={users} />
+    </>
+  )
+  // ...
+}
+```
+
+### 6. Fetching data
+
+This is the biggest misuse I have seen. API calls should be placed in a
+useEffect hook ... RIGHT??? ...NOT REALLY.
+
+Fetched data will be used to update a particular state. And updating a state in
+a `useEffect()` might cause unnecessary re-renders. We do not want this.
+
+When you fetch data as a result of a user event like clicking on a button, your
+fetch function should be placed in the event handler.
+
+```js
+❌
+
+const SearchPage = () => {
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    fetchResults().then(json => {
+      setResults(json);
+    });
+  }, []);
+
+  // ...
+}
+```
+
+```js
+✅
+
+const SearchPage = () => {
+  const [results, setResults] = useState([]);
+
+  const handleSearchResult = () => {
+    fetchResults().then(json => {
+      setResults(json);
+    });
+  }
+
+  return (
+    <>
+      <button onClick={handleSearchResult}> search </button>
+      <h2> Your search results </h2>
+      <SearchResults reuslts ={results}/>
+    </>
+  )
+  // ...
+}
+```
+
+There are cases where you need to fetch data as a page loads, your fetch
+function can be placed in a `useEffect()` but you should also add a cleanup
+function.
+
+```js
+✅
+
+const SearchPage = () => {
+  const [results, setResults] = useState([]);
+
+  useEffect(() => {
+    let ignore = false;
+
+      fetchResults().then(json => {
+        if (!ignore) {
+        setResults(json);
+        }
+      });
+    // cleanup function
+    return () => {
+      ignore = true;
+    };
+  }, []);
+  // ...
+}
+```
+
+But this is not the best solution because it does not take care of race
+conditions, caching, error handling, network waterfalls, and more. A better
+solution would be to use a framework or library that handles all these issues
+like React Query, SWR, Remix, etc.
+
+```js
+✅ ✅
+
+import {useQuery} from 'react-query';
+
+const SearchPage = () => {
+  const {data:results, isLoading, isError} = useQuery('results', fetchResults());
+  // ...
+}
+```
+
+<p>&nbsp;</p>
+
+## So where can you use a useEffect?
+
+The `useEffect()` is specifically for <u>synchronization</u> with side-effects
+that are caused by rendering. Simply put, the useEffect hook is for effects that
+will need to synchronize depending on changes in a component's reactive values
+(props, state and values derived from props or state) which will be added to the
+useEffect dependency array.
+
+One golden rule I follow before using the useEffect hook is this:
+
+> If your side-effect logic can execute outside a useEffect hook without causing
+> unnecessary re-rendering, then you might not need a `useEffect()`.
+
+Below are a few cases where you might need a useEffect hook.
+
+### 1. Subscribing to events
+
+When you subscribe to an event, there should be a corresponding cleanup
+function. This is better done in a `useEffect()`.
+
+```js
+const App = () => {
+  const handleScroll = event => {
+    console.log(window.scrollX, window.scrollY)
+  }
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll)
+    // cleanup this component
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+}
+```
+
+### 2. Controlling non-React UIs
+
+There are cases where you might want to control the parameters of imported UI
+libraries like maps. A useEffect hook might be the best place to do this.
+
+```js
+const App = () => {
+  const mapRef = useRef(null)
+  const [zoom, setZoom] = useState(1)
+
+  useEffect(() => {
+    const map = mapRef.current
+    map.setZoomLevel(zoom)
+  }, [zoom])
+  // ...
+}
+```
+
+This also includes running things like animations on page load.
+
+```js
+import { runFireworks } from 'runFireworks'
+
+const SuccessPage = () => {
+  useEffect(() => {
+    runFireworks()
+  }, [])
+  // ...
+}
+```
+
+### 3. Controlling Timer functions
+
+```js
+const Counter = () => {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => {
+    // Implementing the setInterval method
+    const interval = setInterval(() => {
+      setCount(count + 1)
+    }, 1000)
+    // Clearing the interval
+    return () => clearInterval(interval)
+  }, [count])
+
+  return <h1>{count}</h1>
+}
+```
+
+<p>&nbsp;</p>
+
+## In Summary
+
+- `useEffect()` is for synchronization.
+
+- If there is no external system involved, you shouldn’t need a `useEffect()`.
+
+- If the side-effect logic can execute outside the useEffect hook, you shouldn’t
+  need a `useEffect()`.
+
+- If your implementation of `useEffect()` causes unnecessary render, you are
+  probably using it wrong.
+
+- Use `useEffect()` sapringly.

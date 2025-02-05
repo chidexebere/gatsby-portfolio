@@ -6,7 +6,7 @@ import RecentProjects from '@/components/recent-projects'
 export default function Home() {
   return (
     <section className=''>
-      <div className='container max-w-3xl'>
+      <div className='container flex max-w-3xl flex-col gap-y-20'>
         <Intro />
         <RecentPosts />
         <RecentProjects />
